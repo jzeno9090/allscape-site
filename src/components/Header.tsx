@@ -63,7 +63,7 @@ export function Header() {
           </nav>
 
           <Link href="/contact" className="btn-primary text-xs md:text-sm">
-            Request a Quote
+            Request Service
           </Link>
         </div>
       </header>

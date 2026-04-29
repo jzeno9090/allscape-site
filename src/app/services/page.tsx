@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 const cardImages: Record<string, string> = {
-  'lawn-irrigation': '/images/card-irrigation.webp',
-  'landscape-lighting': '/images/card-landscape-lighting.webp',
-  'holiday-lighting': '/images/card-holiday-lighting.webp',
-  'paver-restoration': '/images/card-christmas-lights.webp',
+  'lawn-irrigation': '/images/card-irrigation.jpg',
+  'landscape-lighting': '/images/card-landscape-lighting.jpg',
+  'holiday-lighting': '/images/card-holiday-lighting.jpg',
+  'paver-restoration': '/images/card-paver-restoration.jpg',
 };
 
 export default function ServicesPage() {
@@ -51,7 +51,7 @@ export default function ServicesPage() {
               >
                 <div className="aspect-[4/3] overflow-hidden bg-green-soft">
                   <img
-                    src={cardImages[service.slug] ?? '/images/hero-irrigation.webp'}
+                    src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

@@ -37,3 +37,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Squarespace scrape archive — local-only image/video/HTML library.
+# Kept out of git to avoid 100MB+ repo bloat. Pull files into public/images/
+# (root) to deploy individual assets.
+/scraped/
+/public/images/scraped/

@@ -4,10 +4,10 @@ import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
 
 const cardImages: Record<string, string> = {
-  'lawn-irrigation': '/images/card-irrigation.webp',
-  'landscape-lighting': '/images/card-landscape-lighting.webp',
-  'holiday-lighting': '/images/card-holiday-lighting.webp',
-  'paver-restoration': '/images/card-christmas-lights.webp', // placeholder until paver photo exists
+  'lawn-irrigation': '/images/card-irrigation.jpg',
+  'landscape-lighting': '/images/card-landscape-lighting.jpg',
+  'holiday-lighting': '/images/card-holiday-lighting.jpg',
+  'paver-restoration': '/images/card-paver-restoration.jpg',
 };
 
 export default function HomePage() {
@@ -26,10 +26,9 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          poster="/images/hero-irrigation.webp"
+          poster="/images/card-irrigation.jpg"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/videos/hero.webm" type="video/webm" />
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>
 
@@ -85,7 +84,7 @@ export default function HomePage() {
               >
                 <div className="aspect-[4/3] overflow-hidden bg-green-soft">
                   <img
-                    src={cardImages[service.slug] ?? '/images/hero-irrigation.webp'}
+                    src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />

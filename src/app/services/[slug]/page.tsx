@@ -33,10 +33,10 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
 }
 
 const heroImages: Record<string, string> = {
-  'lawn-irrigation': '/images/card-irrigation.webp',
-  'landscape-lighting': '/images/card-landscape-lighting.webp',
-  'holiday-lighting': '/images/card-holiday-lighting.webp',
-  'paver-restoration': '/images/card-christmas-lights.webp',
+  'lawn-irrigation': '/images/card-irrigation.jpg',
+  'landscape-lighting': '/images/card-landscape-lighting.jpg',
+  'holiday-lighting': '/images/card-holiday-lighting.jpg',
+  'paver-restoration': '/images/card-paver-restoration.jpg',
 };
 
 export default async function ServicePage({ params }: ServicePageProps) {
@@ -64,7 +64,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <section className="relative bg-green-ink overflow-hidden min-h-[480px] flex items-center">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/hero-irrigation.webp'}')` }}
+          style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/card-irrigation.jpg'}')` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-green-ink/85 via-green-ink/65 to-green-ink/40" />
 

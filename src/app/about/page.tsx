@@ -38,8 +38,8 @@ export default function AboutPage() {
               customers.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
-              We&apos;re licensed, insured, and an Inception certified installer for permanent holiday lighting.
-              Our service area covers 70+ cities across Lake, McHenry, Cook, and Kane counties.
+              We&apos;re licensed and insured. Our service area covers 70+ cities across Lake, McHenry, Cook,
+              and Kane counties.
             </p>
           </div>
 

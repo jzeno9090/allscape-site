@@ -9,8 +9,8 @@ const JOBBER_CLIENT_LOGIN =
   'https://clienthub.getjobber.com/client_hubs/92f3f5ef-eaaa-4f2c-9178-35059701f70a/login/new';
 
 export const metadata: Metadata = {
-  title: 'Request Service or a Quote',
-  description: `Request service or a free quote from Allscape Services for lawn irrigation, landscape lighting, holiday lighting, or paver restoration. Call ${business.phone} or fill out our request form.`,
+  title: 'Submit a Request',
+  description: `Submit a request to Allscape Services for lawn irrigation, landscape lighting, holiday lighting, or paver restoration. Call ${business.phone} or fill out the form.`,
 };
 
 export default function ContactPage() {
@@ -29,7 +29,7 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Get Started</div>
               <h1 className="font-display text-5xl md:text-6xl text-green-ink leading-[1.05] mb-6">
-                Request service or a quote.
+                Submit a request.
               </h1>
               <p className="text-lg text-gray-warm leading-relaxed max-w-xl mb-10">
                 Tell us a little about your project. We&apos;ll follow up within one business day to schedule a free

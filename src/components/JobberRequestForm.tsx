@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-const CLIENTHUB_ID = '92f3f5ef-eaaa-4f2c-9178-35059701f70a-426161';
+const CLIENTHUB_ID = '92f3f5ef-eaaa-4f2c-9178-35059701f70a';
 const FORM_URL =
   'https://clienthub.getjobber.com/client_hubs/92f3f5ef-eaaa-4f2c-9178-35059701f70a/public/work_request/embedded_work_request_form?form_id=426161';
 const SCRIPT_SRC =

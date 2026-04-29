@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import { business, services } from '@/lib/content';
 import { JsonLd } from '@/components/JsonLd';
@@ -48,11 +49,13 @@ export default function ServicesPage() {
                 href={`/services/${service.slug}`}
                 className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-green-soft">
-                  <img
+                <div className="aspect-[4/3] overflow-hidden bg-green-soft relative">
+                  <Image
                     src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt={`${service.title} — ${service.shortDescription}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="p-6">

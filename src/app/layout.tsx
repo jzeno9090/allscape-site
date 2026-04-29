@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { JsonLd } from '@/components/JsonLd';
@@ -31,6 +33,7 @@ export const metadata: Metadata = {
     'McHenry County IL',
     'Cook County IL',
     'Kane County IL',
+    'Walworth County WI',
   ],
   robots: {
     index: true,
@@ -57,7 +60,9 @@ export const metadata: Metadata = {
     description: business.tagline,
   },
   verification: {
-    // google: '', // add your Google Search Console verification code when ready
+    // After verifying your domain in Google Search Console, paste the
+    // content value of the meta tag here (just the code, not the full tag).
+    // google: 'PASTE_GSC_VERIFICATION_CODE_HERE',
   },
 };
 
@@ -75,6 +80,8 @@ export default function RootLayout({
         <Header />
         <main className="flex-1 relative z-10">{children}</main>
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

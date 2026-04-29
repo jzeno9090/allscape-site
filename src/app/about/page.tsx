@@ -33,9 +33,14 @@ export default function AboutPage() {
               restoration.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
-              For {business.yearsInBusiness}+ years we&apos;ve served homeowners across Northern Illinois &amp;
-              Southern Wisconsin from our shop in Lakemoor, IL. Most of our work comes from referrals and repeat
-              customers.
+              In 2021, Joseph Zeno acquired Allscape and has been reshaping the business since — upgrading
+              equipment standards, refining processes, and bringing new technology into how our techs work
+              day-to-day. The Allscape name has been around for {business.yearsInBusiness}+ years; how we run
+              it is current.
+            </p>
+            <p className="text-lg text-gray-warm leading-relaxed">
+              From our shop in Lakemoor, IL, we serve homeowners across Northern Illinois &amp; Southern
+              Wisconsin. Most of our work comes from referrals and repeat customers.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
               We&apos;re licensed and insured.
@@ -65,8 +70,8 @@ export default function AboutPage() {
             <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">How we work</div>
             <div className="space-y-5">
               <p className="text-lg text-gray-warm leading-relaxed">
-                Same crew, same standards, since {business.established}. Our techs build long-term relationships
-                with their customers — many of our regulars know our team on a first-name basis.
+                Our techs build long-term relationships with their customers — many of our regulars know
+                the team on a first-name basis.
               </p>
               <p className="text-lg text-gray-warm leading-relaxed">
                 We supply our own commercial-grade materials and we service systems we didn&apos;t install. We

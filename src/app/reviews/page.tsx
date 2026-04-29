@@ -22,9 +22,19 @@ export default function ReviewsPage() {
           <h1 className="font-display text-5xl md:text-6xl text-green-ink leading-[1.05] mb-6">
             {business.rating} ★ on average.
           </h1>
-          <p className="text-lg text-gray-warm leading-relaxed">
+          <p className="text-lg text-gray-warm leading-relaxed mb-6">
             Reviews from {business.customerCount} Northern Illinois &amp; Southern Wisconsin homeowners.
           </p>
+          {business.social.google && (
+            <a
+              href={business.social.google}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-green font-bold border-b-2 border-green pb-1 text-sm uppercase tracking-wider hover:text-green-deep"
+            >
+              See all reviews on Google →
+            </a>
+          )}
         </div>
       </section>
 
@@ -47,6 +57,19 @@ export default function ReviewsPage() {
               </article>
             ))}
           </div>
+
+          {business.social.google && (
+            <div className="text-center mt-10">
+              <a
+                href={business.social.google}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-green font-bold border-b-2 border-green pb-1 text-sm uppercase tracking-wider hover:text-green-deep"
+              >
+                Read every review on Google →
+              </a>
+            </div>
+          )}
         </div>
       </section>
 

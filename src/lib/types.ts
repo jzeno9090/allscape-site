@@ -67,6 +67,7 @@ export interface City {
   slug: string;
   name: string;
   county: string;
+  state?: string;
   lat: number;
   lng: number;
 }

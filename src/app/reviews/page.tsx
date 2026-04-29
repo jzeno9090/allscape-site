@@ -4,28 +4,25 @@ import { business } from '@/lib/content';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews',
-  description: 'Read reviews from Northern Illinois homeowners who trust Allscape Services.',
+  description: 'Read reviews from Northern Illinois &amp; Southern Wisconsin homeowners who trust Allscape Services.',
 };
 
 export default function ReviewsPage() {
   return (
     <section className="bg-paper py-20 lg:py-28">
-      <div className="max-w-4xl mx-auto px-8 text-center">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-10 h-px bg-gold" />
-          <span className="text-xs tracking-widest uppercase text-gold font-semibold">Customer Voices</span>
-          <div className="w-10 h-px bg-gold" />
-        </div>
-        <h1 className="font-serif text-5xl md:text-6xl text-navy leading-[1.05] mb-8">
-          {business.rating} ★ <em className="font-light">on average.</em>
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Customer Voices</div>
+        <div className="flex justify-center gap-1 text-3xl mb-6 text-yellow-500">★ ★ ★ ★ ★</div>
+        <h1 className="font-display text-5xl md:text-6xl text-green-ink leading-[1.05] mb-6">
+          {business.rating} ★ on average.
         </h1>
-        <p className="text-lg text-gray-warm leading-relaxed mb-12">
-          Reviews from {business.customerCount} Northern Illinois homeowners.
+        <p className="text-lg text-gray-warm leading-relaxed mb-10">
+          Reviews from {business.customerCount} Northern Illinois &amp; Southern Wisconsin homeowners.
         </p>
-        <Link
-          href="/contact"
-          className="btn-primary"
-        >
+        <p className="text-sm text-gray-warm italic mb-10">
+          Live Google Reviews coming soon.
+        </p>
+        <Link href="/contact" className="btn-primary">
           Become Our Next Review
         </Link>
       </div>

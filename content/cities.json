@@ -72,6 +72,14 @@
     { "slug": "wheeling", "name": "Wheeling", "county": "Cook", "lat": 42.1392, "lng": -87.9289 },
     { "slug": "wilmette", "name": "Wilmette", "county": "Cook", "lat": 42.0728, "lng": -87.7228 },
     { "slug": "winnetka", "name": "Winnetka", "county": "Cook", "lat": 42.1083, "lng": -87.7359 },
-    { "slug": "zion", "name": "Zion", "county": "Lake", "lat": 42.4453, "lng": -87.8328 }
+    { "slug": "zion", "name": "Zion", "county": "Lake", "lat": 42.4453, "lng": -87.8328 },
+    { "slug": "lake-geneva", "name": "Lake Geneva", "county": "Walworth", "state": "WI", "lat": 42.5917, "lng": -88.4334 },
+    { "slug": "elkhorn", "name": "Elkhorn", "county": "Walworth", "state": "WI", "lat": 42.6731, "lng": -88.5443 },
+    { "slug": "delavan", "name": "Delavan", "county": "Walworth", "state": "WI", "lat": 42.6281, "lng": -88.6309 },
+    { "slug": "williams-bay", "name": "Williams Bay", "county": "Walworth", "state": "WI", "lat": 42.5781, "lng": -88.5414 },
+    { "slug": "fontana", "name": "Fontana", "county": "Walworth", "state": "WI", "lat": 42.5475, "lng": -88.5798 },
+    { "slug": "east-troy", "name": "East Troy", "county": "Walworth", "state": "WI", "lat": 42.7836, "lng": -88.4051 },
+    { "slug": "walworth", "name": "Walworth", "county": "Walworth", "state": "WI", "lat": 42.5306, "lng": -88.5995 },
+    { "slug": "genoa-city", "name": "Genoa City", "county": "Walworth", "state": "WI", "lat": 42.4978, "lng": -88.3287 }
   ]
 }

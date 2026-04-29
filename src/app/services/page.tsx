@@ -7,7 +7,14 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Our Services',
   description:
-    'Professional lawn irrigation, landscape lighting, holiday lighting, and paver restoration services in Northern Illinois.',
+    'Professional lawn irrigation, landscape lighting, holiday lighting, and paver restoration services in Northern Illinois &amp; Southern Wisconsin.',
+};
+
+const cardImages: Record<string, string> = {
+  'lawn-irrigation': '/images/card-irrigation.webp',
+  'landscape-lighting': '/images/card-landscape-lighting.webp',
+  'holiday-lighting': '/images/card-holiday-lighting.webp',
+  'paver-restoration': '/images/card-christmas-lights.webp',
 };
 
 export default function ServicesPage() {
@@ -21,48 +28,61 @@ export default function ServicesPage() {
       />
 
       <section className="bg-paper py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-px bg-gold" />
-            <span className="text-xs tracking-widest uppercase text-gold font-semibold">Our Services</span>
-          </div>
-          <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl text-navy leading-[1.05] mb-8 max-w-4xl">
-            Four specialties.<br />
-            <em className="font-light">Done right.</em>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Our Services</div>
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-green-ink leading-[1.05] mb-6 max-w-4xl">
+            Four specialties. Done right.
           </h1>
           <p className="text-lg text-gray-warm max-w-2xl leading-relaxed">
             We focus on four outdoor services and refuse to dilute that with anything else. After {business.yearsInBusiness}+
-            years, this is what we do better than anyone in Northern Illinois.
+            years, this is what we do better than anyone in Northern Illinois &amp; Southern Wisconsin.
           </p>
         </div>
       </section>
 
-      <section className="bg-paper-warm py-24 border-t border-line">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid md:grid-cols-2 gap-px bg-line">
+      <section className="bg-paper-warm py-20 border-t border-line">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="bg-paper p-12 group hover:bg-paper-warm transition-colors"
+                className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1"
               >
-                <div className="service-num text-3xl mb-6">{service.romanNumeral}.</div>
-                <h2 className="font-serif text-3xl text-navy mb-4 leading-tight">{service.title}</h2>
-                <p className="text-gray-warm leading-relaxed mb-8">{service.tagline}</p>
-                <div className="inline-flex items-center gap-3 text-navy font-semibold text-sm uppercase tracking-wider">
-                  Learn more
-                  <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                <div className="aspect-[4/3] overflow-hidden bg-green-soft">
+                  <img
+                    src={cardImages[service.slug] ?? '/images/hero-irrigation.webp'}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-6">
+                  <h2 className="font-display text-2xl text-green-ink mb-2 group-hover:text-green transition-colors">
+                    {service.title}
+                  </h2>
+                  <p className="text-gray-warm text-sm leading-relaxed">{service.tagline}</p>
+                  <div className="mt-4 inline-flex items-center gap-2 text-green font-bold text-sm uppercase tracking-wide">
+                    Learn More
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="bg-green py-16">
+        <div className="max-w-5xl mx-auto px-6 text-center text-white">
+          <h2 className="font-display text-4xl md:text-5xl mb-4">Ready to begin?</h2>
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            Get a free, no-pressure quote on any of our services.
+          </p>
+          <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+            Get Your Free Quote
+          </Link>
         </div>
       </section>
     </>

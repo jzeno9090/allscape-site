@@ -9,7 +9,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
   title: {
-    default: `${business.name} — Lawn Irrigation, Landscape Lighting & Paver Restoration in Northern Illinois`,
+    default: `${business.name} — Lawn Irrigation, Landscape Lighting & Paver Restoration in Northern Illinois & Southern Wisconsin`,
     template: `%s | ${business.name}`,
   },
   description: business.tagline,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     'paver restoration',
     'paver sealing',
     'paver cleaning',
-    'Northern Illinois',
+    'Northern Illinois & Southern Wisconsin',
     'Lake County IL',
     'McHenry County IL',
     'Cook County IL',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: business.url,
     siteName: business.name,
-    title: `${business.name} — Outdoor Services in Northern Illinois`,
+    title: `${business.name} — Outdoor Services in Northern Illinois & Southern Wisconsin`,
     description: business.tagline,
   },
   twitter: {

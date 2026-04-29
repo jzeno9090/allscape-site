@@ -32,6 +32,13 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
   };
 }
 
+const heroImages: Record<string, string> = {
+  'lawn-irrigation': '/images/card-irrigation.webp',
+  'landscape-lighting': '/images/card-landscape-lighting.webp',
+  'holiday-lighting': '/images/card-holiday-lighting.webp',
+  'paver-restoration': '/images/card-christmas-lights.webp',
+};
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
@@ -53,86 +60,83 @@ export default async function ServicePage({ params }: ServicePageProps) {
         ]}
       />
 
-      {/* Hero */}
-      <section className="bg-paper py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8">
-          <nav className="text-xs uppercase tracking-widest text-gray-warm mb-8">
-            <Link href="/" className="hover:text-navy">Home</Link>
+      {/* Hero with photo */}
+      <section className="relative bg-green-ink overflow-hidden min-h-[480px] flex items-center">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/hero-irrigation.webp'}')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-ink/85 via-green-ink/65 to-green-ink/40" />
+
+        <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
+          <nav className="text-xs uppercase tracking-widest text-white/70 mb-6">
+            <Link href="/" className="hover:text-white">Home</Link>
             <span className="mx-3">/</span>
-            <Link href="/services" className="hover:text-navy">Services</Link>
+            <Link href="/services" className="hover:text-white">Services</Link>
             <span className="mx-3">/</span>
-            <span className="text-navy">{service.title}</span>
+            <span className="text-white">{service.title}</span>
           </nav>
 
-          <div className="grid lg:grid-cols-12 gap-12">
-            <div className="lg:col-span-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-px bg-gold" />
-                <span className="text-xs tracking-widest uppercase text-gold font-semibold">
-                  {service.romanNumeral}. Service
-                </span>
-              </div>
+          <div className="max-w-3xl">
+            <div className="text-xs tracking-widest uppercase text-green-soft font-bold mb-4">
+              Service · Northern Illinois & Southern Wisconsin
+            </div>
 
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-navy leading-[1.05] mb-8">
-                {service.h1}
-              </h1>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] mb-6 drop-shadow">
+              {service.h1}
+            </h1>
 
-              <p className="text-xl text-gray-warm leading-relaxed max-w-3xl">{service.tagline}</p>
+            <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">{service.tagline}</p>
 
-              <div className="flex flex-wrap items-center gap-5 mt-10">
-                <Link href="/contact" className="btn-primary">
-                  Get a Free Quote
-                </Link>
-                <a
-                  href={`tel:${business.phoneRaw}`}
-                  className="text-navy font-semibold border-b-2 border-gold pb-1 hover:text-navy-soft"
-                >
-                  {business.phone}
-                </a>
-              </div>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/contact" className="btn-primary">
+                Get a Free Quote
+              </Link>
+              <a
+                href={`tel:${business.phoneRaw}`}
+                className="bg-white/10 backdrop-blur border-2 border-white text-white px-7 py-3.5 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green-ink transition-all"
+              >
+                Call {business.phone}
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Important note (e.g. paver restoration scope) */}
+      {/* Important note */}
       {service.important_note && (
-        <section className="bg-paper-warm border-t border-b border-gold/30 py-10">
-          <div className="max-w-7xl mx-auto px-8">
+        <section className="bg-green-soft/40 border-t border-b border-green/30 py-8">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="flex gap-4 max-w-4xl">
               <div className="flex-shrink-0 mt-1">
-                <svg className="w-5 h-5 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h.01a1 1 0 100-2H10v-3a1 1 0 00-1-1z"
-                    clipRule="evenodd"
-                  />
+                <svg className="w-6 h-6 text-green" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h.01a1 1 0 100-2H10v-3a1 1 0 00-1-1z" clipRule="evenodd" />
                 </svg>
               </div>
-              <p className="text-navy leading-relaxed">{service.important_note}</p>
+              <p className="text-green-ink leading-relaxed font-medium">{service.important_note}</p>
             </div>
           </div>
         </section>
       )}
 
-      {/* Subheadings / sections */}
-      <section className="bg-paper-warm py-24">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
+      {/* Subheadings */}
+      <section className="bg-paper py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
-              <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-4">What we do</div>
-              <h2 className="font-serif text-3xl md:text-4xl text-navy leading-[1.1] sticky top-32">
+              <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">What we do</div>
+              <h2 className="font-display text-3xl md:text-4xl text-green-ink leading-[1.1] lg:sticky lg:top-32">
                 The full scope.
               </h2>
             </div>
             <div className="lg:col-span-8">
-              <div className="space-y-12">
+              <div className="space-y-8">
                 {service.subheadings.map((sub, idx) => (
-                  <div key={idx} className="border-l-2 border-gold pl-8">
-                    <div className="font-serif italic text-gold text-xl mb-3">
+                  <div key={idx} className="bg-white rounded-xl p-7 shadow-md border-l-4 border-green">
+                    <div className="font-display text-3xl text-green-soft mb-2">
                       {String(idx + 1).padStart(2, '0')}
                     </div>
-                    <h3 className="font-serif text-2xl text-navy mb-3">{sub.title}</h3>
+                    <h3 className="font-display text-2xl text-green-ink mb-3">{sub.title}</h3>
                     <p className="text-gray-warm leading-relaxed">{sub.body}</p>
                   </div>
                 ))}
@@ -143,21 +147,21 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* FAQs */}
-      <section className="bg-paper py-24">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-12 gap-12">
+      <section className="bg-paper-warm py-20 border-t border-line">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-4">
-              <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-4">FAQs</div>
-              <h2 className="font-serif text-3xl md:text-4xl text-navy leading-[1.1]">
+              <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">FAQs</div>
+              <h2 className="font-display text-3xl md:text-4xl text-green-ink leading-[1.1]">
                 Common questions.
               </h2>
             </div>
-            <div className="lg:col-span-8 divide-y divide-line border-t border-b border-line">
+            <div className="lg:col-span-8 bg-white rounded-xl shadow-md divide-y divide-line">
               {service.faqs.map((faq, idx) => (
-                <details key={idx} className="group py-6">
+                <details key={idx} className="group p-6">
                   <summary className="flex justify-between items-start gap-6 cursor-pointer list-none">
-                    <h3 className="font-serif text-xl text-navy leading-tight pr-4">{faq.question}</h3>
-                    <span className="flex-shrink-0 mt-1 text-gold transition-transform group-open:rotate-45 text-2xl leading-none">
+                    <h3 className="font-display text-xl text-green-ink leading-tight pr-4">{faq.question}</h3>
+                    <span className="flex-shrink-0 mt-1 text-green transition-transform group-open:rotate-45 text-2xl leading-none">
                       +
                     </span>
                   </summary>
@@ -170,20 +174,19 @@ export default async function ServicePage({ params }: ServicePageProps) {
       </section>
 
       {/* CTA */}
-      <section className="bg-navy text-white py-24">
-        <div className="max-w-5xl mx-auto px-8 text-center">
-          <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-6">Ready to begin?</div>
-          <h2 className="font-serif text-4xl md:text-5xl leading-[1.1] mb-8">
-            Request a free <em className="font-light">{service.shortTitle.toLowerCase()}</em> quote.
+      <section className="bg-green py-16">
+        <div className="max-w-5xl mx-auto px-6 text-center text-white">
+          <h2 className="font-display text-4xl md:text-5xl mb-4">
+            Request a free {service.shortTitle.toLowerCase()} quote.
           </h2>
+          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+            No pressure, no obligation. We&apos;ll come on-site and walk through your project.
+          </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-gold text-navy px-8 py-4 text-sm tracking-wider font-semibold uppercase hover:bg-gold-soft transition-colors">
-              Schedule Online
+            <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+              Request a Quote
             </Link>
-            <a
-              href={`tel:${business.phoneRaw}`}
-              className="border border-white text-white px-8 py-4 text-sm tracking-wider font-semibold uppercase hover:bg-white hover:text-navy transition-colors"
-            >
+            <a href={`tel:${business.phoneRaw}`} className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
               Call {business.phone}
             </a>
           </div>

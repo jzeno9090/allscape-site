@@ -23,14 +23,22 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
     return { title: 'City Not Found' };
   }
 
+  const st = city.state ?? 'IL';
   return {
-    title: `Lawn Irrigation, Landscape Lighting & Paver Restoration in ${city.name}, IL`,
-    description: `Sprinkler systems, landscape lighting, holiday lighting, and paver restoration for ${city.name}, ${city.county} County homeowners. Established outdoor service experts since ${business.established}.`,
+    title: `Lawn Irrigation, Landscape Lighting & Paver Restoration in ${city.name}, ${st}`,
+    description: `Sprinkler systems, landscape lighting, holiday lighting, and paver restoration for ${city.name}, ${st} homeowners. Established outdoor service experts since ${business.established}.`,
     alternates: {
       canonical: `${business.url}/service-areas/${city.slug}`,
     },
   };
 }
+
+const cardImages: Record<string, string> = {
+  'lawn-irrigation': '/images/card-irrigation.webp',
+  'landscape-lighting': '/images/card-landscape-lighting.webp',
+  'holiday-lighting': '/images/card-holiday-lighting.webp',
+  'paver-restoration': '/images/card-christmas-lights.webp',
+};
 
 export default async function CityPage({ params }: CityPageProps) {
   const { city: citySlug } = await params;
@@ -40,7 +48,6 @@ export default async function CityPage({ params }: CityPageProps) {
     notFound();
   }
 
-  // Find 5 nearby cities (excluding this one) for internal linking
   const nearbyCities = cities
     .filter((c) => c.slug !== city.slug && c.county === city.county)
     .slice(0, 5);
@@ -59,41 +66,38 @@ export default async function CityPage({ params }: CityPageProps) {
       />
 
       {/* Hero */}
-      <section className="bg-paper py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-8">
-          <nav className="text-xs uppercase tracking-widest text-gray-warm mb-8">
-            <Link href="/" className="hover:text-navy">Home</Link>
+      <section className="bg-paper py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <nav className="text-xs uppercase tracking-widest text-gray-warm mb-6">
+            <Link href="/" className="hover:text-green">Home</Link>
             <span className="mx-3">/</span>
-            <Link href="/service-areas" className="hover:text-navy">Service Areas</Link>
+            <Link href="/service-areas" className="hover:text-green">Service Areas</Link>
             <span className="mx-3">/</span>
-            <span className="text-navy">{city.name}</span>
+            <span className="text-green-ink">{city.name}</span>
           </nav>
 
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-px bg-gold" />
-                <span className="text-xs tracking-widest uppercase text-gold font-semibold">
-                  {city.county} County · Northern Illinois
-                </span>
+              <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">
+                Northern Illinois &amp; Southern Wisconsin
               </div>
 
-              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-navy leading-[1.05] mb-8">
-                Lawn Irrigation, Landscape Lighting &amp; Paver Restoration in {city.name}, IL
+              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-green-ink leading-[1.05] mb-6">
+                Lawn Irrigation, Landscape Lighting &amp; Paver Restoration in {city.name}, {city.state ?? 'IL'}
               </h1>
 
-              <p className="text-lg text-gray-warm leading-relaxed max-w-2xl mb-10">
+              <p className="text-lg text-gray-warm leading-relaxed max-w-2xl mb-8">
                 Sprinkler systems, landscape lighting, holiday lighting, and paver restoration — done right. Serving
                 {' '}{city.name} homeowners since {business.established}.
               </p>
 
-              <div className="flex flex-wrap items-center gap-5">
+              <div className="flex flex-wrap items-center gap-4">
                 <Link href="/contact" className="btn-primary">
                   Get a Free Quote
                 </Link>
                 <a
                   href={`tel:${business.phoneRaw}`}
-                  className="text-navy font-semibold border-b-2 border-gold pb-1 hover:text-navy-soft"
+                  className="text-green-ink font-bold border-b-2 border-green pb-1 hover:text-green"
                 >
                   {business.phone}
                 </a>
@@ -101,19 +105,19 @@ export default async function CityPage({ params }: CityPageProps) {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-paper-warm border border-line p-8">
-                <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-4">Trusted in {city.name}</div>
-                <div className="space-y-4">
+              <div className="bg-white rounded-xl border border-line shadow-lg p-8">
+                <div className="text-xs tracking-widest uppercase text-green font-bold mb-5">Trusted in {city.name}</div>
+                <div className="space-y-5">
                   <div className="flex items-baseline gap-4">
-                    <div className="font-serif text-3xl text-navy font-semibold">{business.yearsInBusiness}+</div>
-                    <div className="text-sm text-gray-warm">years serving Northern Illinois</div>
+                    <div className="font-display text-4xl text-green-ink">{business.yearsInBusiness}+</div>
+                    <div className="text-sm text-gray-warm">years serving Northern Illinois &amp; Southern Wisconsin</div>
                   </div>
                   <div className="flex items-baseline gap-4">
-                    <div className="font-serif text-3xl text-navy font-semibold">{business.customerCount}</div>
-                    <div className="text-sm text-gray-warm">Northern Illinois homeowners served</div>
+                    <div className="font-display text-4xl text-green-ink">{business.customerCount}</div>
+                    <div className="text-sm text-gray-warm">homeowners served</div>
                   </div>
                   <div className="flex items-baseline gap-4">
-                    <div className="font-serif text-3xl text-navy font-semibold">{business.rating} ★</div>
+                    <div className="font-display text-4xl text-green-ink">{business.rating} ★</div>
                     <div className="text-sm text-gray-warm">average customer rating</div>
                   </div>
                 </div>
@@ -124,45 +128,36 @@ export default async function CityPage({ params }: CityPageProps) {
       </section>
 
       {/* Services for this city */}
-      <section className="bg-paper-warm py-24 border-t border-line">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid lg:grid-cols-12 gap-8 mb-16">
-            <div className="lg:col-span-5">
-              <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-4">
-                Services in {city.name}
-              </div>
-              <h2 className="font-serif text-4xl md:text-5xl text-navy leading-[1.1]">
-                Four specialties.<br />
-                <em className="font-light">Done right.</em>
-              </h2>
+      <section className="bg-paper-warm py-20 border-t border-line">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">
+              Services in {city.name}
             </div>
+            <h2 className="font-display text-4xl md:text-5xl text-green-ink leading-[1.1]">
+              Four specialties. Done right.
+            </h2>
           </div>
 
-          <div className="border-t border-line">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="block group border-b border-line py-10 hover:bg-paper transition-colors"
+                className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1"
               >
-                <div className="grid lg:grid-cols-12 gap-8 items-center">
-                  <div className="lg:col-span-1 service-num text-3xl">{service.romanNumeral}.</div>
-                  <div className="lg:col-span-4">
-                    <h3 className="font-serif text-3xl text-navy leading-tight">{service.title}</h3>
-                  </div>
-                  <div className="lg:col-span-6">
-                    <p className="text-gray-warm leading-relaxed">{service.shortDescription}</p>
-                  </div>
-                  <div className="lg:col-span-1 flex justify-end">
-                    <svg
-                      className="w-6 h-6 text-navy transition-transform group-hover:translate-x-1"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeWidth="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
+                <div className="aspect-[4/3] overflow-hidden bg-green-soft">
+                  <img
+                    src={cardImages[service.slug] ?? '/images/hero-irrigation.webp'}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-5">
+                  <h3 className="font-display text-xl text-green-ink mb-2 group-hover:text-green transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-warm text-sm leading-relaxed">{service.shortDescription}</p>
                 </div>
               </Link>
             ))}
@@ -170,25 +165,25 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Nearby cities for internal linking & local SEO */}
+      {/* Nearby cities */}
       {nearbyCities.length > 0 && (
-        <section className="bg-paper py-20 border-t border-line">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-4">Nearby Service Areas</div>
-            <h2 className="font-serif text-3xl text-navy mb-10">Also serving {city.county} County</h2>
+        <section className="bg-paper py-16 border-t border-line">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">Nearby Service Areas</div>
+            <h2 className="font-display text-3xl text-green-ink mb-8">Other communities we serve</h2>
             <div className="flex flex-wrap gap-3">
               {nearbyCities.map((nearby) => (
                 <Link
                   key={nearby.slug}
                   href={`/service-areas/${nearby.slug}`}
-                  className="border border-line bg-paper-warm hover:bg-navy hover:text-white text-navy px-5 py-3 text-sm font-medium transition-colors"
+                  className="bg-white border border-line hover:bg-green hover:text-white hover:border-green text-green-ink px-5 py-3 text-sm font-medium rounded-md transition-colors shadow-sm"
                 >
                   {nearby.name}
                 </Link>
               ))}
               <Link
                 href="/service-areas"
-                className="text-navy font-semibold border-b-2 border-gold px-2 py-3 text-sm uppercase tracking-wider hover:text-navy-soft"
+                className="text-green font-bold border-b-2 border-green px-2 py-3 text-sm uppercase tracking-wider hover:text-green-deep"
               >
                 View all {cities.length} cities →
               </Link>
@@ -198,22 +193,22 @@ export default async function CityPage({ params }: CityPageProps) {
       )}
 
       {/* CTA */}
-      <section className="bg-navy text-white py-24">
-        <div className="max-w-5xl mx-auto px-8 text-center">
-          <div className="text-xs tracking-widest uppercase text-gold font-semibold mb-6">{city.name} homeowners</div>
-          <h2 className="font-serif text-4xl md:text-5xl leading-[1.1] mb-8">
-            Request a free quote in <em className="font-light">{city.name}</em>.
+      <section className="bg-green py-16">
+        <div className="max-w-5xl mx-auto px-6 text-center text-white">
+          <div className="text-xs tracking-widest uppercase text-green-soft font-bold mb-4">{city.name} homeowners</div>
+          <h2 className="font-display text-4xl md:text-5xl leading-[1.1] mb-6">
+            Request a free quote in {city.name}.
           </h2>
-          <p className="text-white/70 max-w-xl mx-auto mb-10">
+          <p className="text-white/90 max-w-xl mx-auto mb-8">
             No pressure. No obligation. Just an honest conversation about your project.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-gold text-navy px-8 py-4 text-sm tracking-wider font-semibold uppercase hover:bg-gold-soft transition-colors">
-              Schedule Online
+            <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+              Request a Quote
             </Link>
             <a
               href={`tel:${business.phoneRaw}`}
-              className="border border-white text-white px-8 py-4 text-sm tracking-wider font-semibold uppercase hover:bg-white hover:text-navy transition-colors"
+              className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all"
             >
               {business.phone}
             </a>

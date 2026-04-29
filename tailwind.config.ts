@@ -7,34 +7,38 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Direction 2 — Clean & Trustworthy palette
-        navy: {
-          DEFAULT: '#0f1e2d',
-          soft: '#1a2f47',
-          deep: '#0a1520',
+        // Brand greens — pulled from the Allscape logo. Swap exact hex
+        // here if you have brand spec values.
+        green: {
+          DEFAULT: '#4ea03c',  // brand green (logo letter fill)
+          deep: '#1a4d2a',     // dark forest (logo outline)
+          ink: '#0d2818',      // near-black green (header bg, body text)
+          soft: '#c5e2b3',     // mint (subtle accents, hover bg)
+          paper: '#f0f7ec',    // pale green cream
         },
+        sky: {
+          DEFAULT: '#5fb8e0',  // logo river blue, used sparingly
+        },
+        // Kept as supporting tokens so existing styles don't break.
         gold: {
           DEFAULT: '#c9a449',
           soft: '#e9d4a3',
-          dark: '#a08537',
         },
         paper: {
           DEFAULT: '#fcfbf7',
           warm: '#f4f0e8',
         },
-        line: '#e2dcd0',
+        line: '#dde7d4',
         ink: '#1f1f1f',
         gray: {
-          warm: '#6b6b6b',
-        },
-        // Brand green retained for accent use only (small details, badges)
-        green: {
-          brand: '#2d5a3d',
+          warm: '#5b6b5b',
         },
       },
       fontFamily: {
-        sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+        // Single-family system: Plus Jakarta Sans across the whole site.
+        // Clean, modern, professional without feeling generic.
+        sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.3em',

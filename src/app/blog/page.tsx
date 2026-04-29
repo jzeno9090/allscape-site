@@ -1,25 +1,25 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Blog',
-  description: 'Tips, guides, and insights on lawn irrigation, landscape lighting, holiday lighting, and paver restoration in Northern Illinois.',
+  description: 'Tips, guides, and insights on lawn irrigation, landscape lighting, holiday lighting, and paver restoration in Northern Illinois & Southern Wisconsin.',
 };
 
 export default function BlogPage() {
   return (
     <section className="bg-paper py-20 lg:py-28">
-      <div className="max-w-4xl mx-auto px-8 text-center">
-        <div className="flex items-center justify-center gap-3 mb-8">
-          <div className="w-10 h-px bg-gold" />
-          <span className="text-xs tracking-widest uppercase text-gold font-semibold">Blog</span>
-          <div className="w-10 h-px bg-gold" />
-        </div>
-        <h1 className="font-serif text-5xl md:text-6xl text-navy leading-[1.05] mb-8">
+      <div className="max-w-3xl mx-auto px-6 text-center">
+        <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Blog</div>
+        <h1 className="font-display text-5xl md:text-6xl text-green-ink leading-[1.05] mb-6">
           Coming soon.
         </h1>
-        <p className="text-lg text-gray-warm leading-relaxed">
-          Tips, guides, and insights on outdoor services in Northern Illinois — coming soon.
+        <p className="text-lg text-gray-warm leading-relaxed mb-10">
+          Tips, guides, and insights on outdoor services in Northern Illinois & Southern Wisconsin — coming soon.
         </p>
+        <Link href="/contact" className="btn-primary">
+          Request a Quote
+        </Link>
       </div>
     </section>
   );

@@ -46,6 +46,15 @@ export interface ServiceFAQ {
 export interface ServiceSubheading {
   title: string;
   body: string;
+  link?: {
+    text: string;
+    href: string;
+  };
+}
+
+export interface Plumber {
+  name: string;
+  phone: string;
 }
 
 export interface Service {

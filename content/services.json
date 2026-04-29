@@ -24,8 +24,12 @@
           "body": "Northern Illinois & Southern Wisconsin winters are hard on irrigation. We handle proper blow-outs in fall and full system pressure-up and inspection in spring."
         },
         {
-          "title": "Backflow Testing Referrals",
-          "body": "Required annually in Illinois for any property with an irrigation system. We don't perform backflow testing in-house, but we'll point you to a licensed plumber in your area who does — give us a call."
+          "title": "RPZ Backflow Testing",
+          "body": "Required annually in Illinois on any property with an irrigation system. RPZ testing must be performed by a licensed plumber with a CCDI license — we don't do it in-house. We keep an updated list of plumbers we've worked with, organized by city.",
+          "link": {
+            "text": "View RPZ plumbers by city",
+            "href": "/rpz-plumbers-by-city"
+          }
         }
       ],
       "faqs": [

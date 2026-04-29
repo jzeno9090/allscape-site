@@ -144,6 +144,14 @@ export default async function ServicePage({ params }: ServicePageProps) {
                     </div>
                     <h3 className="font-display text-2xl text-green-ink mb-3">{sub.title}</h3>
                     <p className="text-gray-warm leading-relaxed">{sub.body}</p>
+                    {sub.link && (
+                      <Link
+                        href={sub.link.href}
+                        className="inline-flex items-center gap-2 mt-4 text-green font-bold border-b-2 border-green pb-1 text-sm uppercase tracking-wider hover:text-green-deep"
+                      >
+                        {sub.link.text} →
+                      </Link>
+                    )}
                   </div>
                 ))}
               </div>

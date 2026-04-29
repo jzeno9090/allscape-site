@@ -67,6 +67,7 @@ export interface Service {
   metaTitle: string;
   metaDescription: string;
   h1: string;
+  badge?: string;
   subheadings: ServiceSubheading[];
   important_note?: string;
   faqs: ServiceFAQ[];

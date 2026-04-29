@@ -23,23 +23,23 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Our Story</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-green-ink leading-[1.05] mb-10">
-            {business.yearsInBusiness} years of doing it right.
+            About Allscape Services.
           </h1>
 
           <div className="space-y-6">
             <p className="text-xl text-gray-warm leading-relaxed">
-              Allscape Services was founded in {business.established} with a simple idea: do a few things, do them
-              better than anyone else, and treat every yard like it&apos;s our own.
+              Allscape Services was founded in {business.established} as a specialty outdoor services company.
+              Today we focus on four things: lawn irrigation, landscape lighting, holiday lighting, and paver
+              restoration.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
-              For over {business.yearsInBusiness} years, we&apos;ve focused on four outdoor specialties — lawn irrigation,
-              landscape lighting, holiday lighting, and paver restoration — and refused to dilute our work with
-              services we don&apos;t do as well. The result is a small business that {business.customerCount} Northern
-              Illinois homeowners come back to, year after year.
+              For {business.yearsInBusiness}+ years we&apos;ve served homeowners across Northern Illinois &amp;
+              Southern Wisconsin from our shop in Lakemoor, IL. Most of our work comes from referrals and repeat
+              customers.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
-              We&apos;re licensed, insured, Inception certified for permanent holiday lighting, and proud to serve over
-              70 cities across Lake, McHenry, Cook, and Kane counties.
+              We&apos;re licensed, insured, and an Inception certified installer for permanent holiday lighting.
+              Our service area covers 70+ cities across Lake, McHenry, Cook, and Kane counties.
             </p>
           </div>
 

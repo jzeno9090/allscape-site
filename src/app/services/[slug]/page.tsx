@@ -39,6 +39,10 @@ const heroImages: Record<string, string> = {
   'paver-restoration': '/images/card-paver-restoration.jpg',
 };
 
+const heroVideos: Record<string, string> = {
+  'lawn-irrigation': '/videos/irrigation.mp4',
+};
+
 export default async function ServicePage({ params }: ServicePageProps) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
@@ -60,12 +64,25 @@ export default async function ServicePage({ params }: ServicePageProps) {
         ]}
       />
 
-      {/* Hero with photo */}
+      {/* Hero with photo or video */}
       <section className="relative bg-green-ink overflow-hidden min-h-[480px] flex items-center">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/card-irrigation.jpg'}')` }}
-        />
+        {heroVideos[service.slug] ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            poster={heroImages[service.slug] ?? '/images/card-irrigation.jpg'}
+            className="absolute inset-0 w-full h-full object-cover"
+          >
+            <source src={heroVideos[service.slug]} type="video/mp4" />
+          </video>
+        ) : (
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/card-irrigation.jpg'}')` }}
+          />
+        )}
         <div className="absolute inset-0 bg-gradient-to-r from-green-ink/85 via-green-ink/65 to-green-ink/40" />
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 w-full">
@@ -81,6 +98,13 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="text-xs tracking-widest uppercase text-green-soft font-bold mb-4">
               Service · Northern Illinois & Southern Wisconsin
             </div>
+
+            {service.badge && (
+              <div className="inline-flex items-center gap-2 bg-green-soft text-green-ink text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-green" />
+                {service.badge}
+              </div>
+            )}
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.05] mb-6 drop-shadow">
               {service.h1}

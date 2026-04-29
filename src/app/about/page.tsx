@@ -35,8 +35,7 @@ export default function AboutPage() {
             <p className="text-lg text-gray-warm leading-relaxed">
               In 2021, Joseph Zeno acquired Allscape and has been reshaping the business since — upgrading
               equipment standards, refining processes, and bringing new technology into how our techs work
-              day-to-day. The Allscape name has been around for {business.yearsInBusiness}+ years; how we run
-              it is current.
+              day-to-day.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
               From our shop in Lakemoor, IL, we serve homeowners across Northern Illinois &amp; Southern
@@ -66,22 +65,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="mt-16">
-            <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">How we work</div>
-            <div className="space-y-5">
-              <p className="text-lg text-gray-warm leading-relaxed">
-                Our techs build long-term relationships with their customers — many of our regulars know
-                the team on a first-name basis.
-              </p>
-              <p className="text-lg text-gray-warm leading-relaxed">
-                We supply our own commercial-grade materials and we service systems we didn&apos;t install. We
-                work on referrals and repeat customers more than ads, which keeps us focused on doing the work
-                right the first time.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-line pt-10 mt-16">
+          <div className="border-t border-line pt-10 mt-12">
             <div className="flex flex-wrap items-center gap-4">
               <Link href="/contact" className="btn-primary">
                 Request Service

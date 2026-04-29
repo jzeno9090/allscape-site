@@ -87,8 +87,6 @@ export default function ContactPage() {
                       {business.hours.weekday}
                       <br />
                       {business.hours.saturday}
-                      <br />
-                      {business.hours.sunday}
                     </div>
                   </div>
                 </div>

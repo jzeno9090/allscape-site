@@ -43,3 +43,6 @@ next-env.d.ts
 # (root) to deploy individual assets.
 /scraped/
 /public/images/scraped/
+
+# Claude Code session tooling (preview server config, etc.)
+/.claude/

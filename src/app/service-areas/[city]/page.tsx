@@ -92,15 +92,15 @@ export default async function CityPage({ params }: CityPageProps) {
               </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <Link href="/contact" className="btn-primary">
+                <a href="/contact" className="btn-primary">
                   Request Service
-                </Link>
-                <Link
+                </a>
+                <a
                   href="/contact"
                   className="border-2 border-green text-green px-7 py-3 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-green hover:text-white transition-all"
                 >
                   Request a Quote
-                </Link>
+                </a>
                 <a
                   href={`tel:${business.phoneRaw}`}
                   className="text-green-ink font-bold border-b-2 border-green pb-1 hover:text-green"
@@ -209,12 +209,12 @@ export default async function CityPage({ params }: CityPageProps) {
             No pressure. No obligation. Just an honest conversation about your project.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+            <a href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
               Request Service
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
               Request a Quote
-            </Link>
+            </a>
             <a
               href={`tel:${business.phoneRaw}`}
               className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all"

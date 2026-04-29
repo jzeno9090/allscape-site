@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Service Areas',
-  description: `Allscape Services serves ${cities.length}+ cities across Northern Illinois &amp; Southern Wisconsin.`,
+  description: `Allscape Services serves ${cities.length}+ cities across Northern Illinois & Southern Wisconsin.`,
 };
 
 export default function ServiceAreasPage() {

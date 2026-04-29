@@ -1,5 +1,20 @@
-import { business, services, type City } from './content';
+import { business, services, cities, reviews, type City } from './content';
 import type { Service } from './types';
+
+/**
+ * Distinct service-area regions, derived from cities.json so adding a new
+ * county/state automatically appears in JSON-LD without code changes.
+ */
+function serviceAreas(): { '@type': 'AdministrativeArea'; name: string }[] {
+  const seen = new Set<string>();
+  for (const c of cities) {
+    seen.add(`${c.county} County, ${c.state ?? 'IL'}`);
+  }
+  return [...seen].sort().map((name) => ({
+    '@type': 'AdministrativeArea',
+    name,
+  }));
+}
 
 /**
  * Base LocalBusiness schema for the homepage and global usage.
@@ -29,10 +44,7 @@ export function localBusinessSchema() {
       latitude: business.geo.latitude,
       longitude: business.geo.longitude,
     },
-    areaServed: business.counties.map((county) => ({
-      '@type': 'AdministrativeArea',
-      name: county,
-    })),
+    areaServed: serviceAreas(),
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -44,7 +56,7 @@ export function localBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: business.rating,
-      reviewCount: '100',
+      reviewCount: String(reviews.length),
       bestRating: '5',
     },
     hasOfferCatalog: {
@@ -67,12 +79,14 @@ export function localBusinessSchema() {
  * Per-city LocalBusiness schema with city-specific areaServed and geo override.
  */
 export function citySchema(city: City) {
+  const stateCode = city.state ?? 'IL';
+  const stateName = stateCode === 'WI' ? 'Wisconsin' : 'Illinois';
   return {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     '@id': `${business.url}/service-areas/${city.slug}/#business`,
-    name: `${business.name} — ${city.name}, IL`,
-    description: `${business.name} provides lawn irrigation, landscape lighting, holiday lighting, and paver restoration services to homeowners in ${city.name}, Illinois.`,
+    name: `${business.name} — ${city.name}, ${stateCode}`,
+    description: `${business.name} provides lawn irrigation, landscape lighting, holiday lighting, and paver restoration services to homeowners in ${city.name}, ${stateName}.`,
     url: `${business.url}/service-areas/${city.slug}`,
     telephone: business.phone,
     address: {
@@ -93,7 +107,7 @@ export function citySchema(city: City) {
       name: city.name,
       containedInPlace: {
         '@type': 'AdministrativeArea',
-        name: `${city.county} County, Illinois`,
+        name: `${city.county} County, ${stateName}`,
       },
       geo: {
         '@type': 'GeoCoordinates',
@@ -127,10 +141,7 @@ export function serviceSchema(service: Service) {
         '@id': `${business.url}/#business`,
         name: business.name,
       },
-      areaServed: business.counties.map((county) => ({
-        '@type': 'AdministrativeArea',
-        name: county,
-      })),
+      areaServed: serviceAreas(),
       url: `${business.url}/services/${service.slug}`,
     },
     {

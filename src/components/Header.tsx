@@ -62,9 +62,9 @@ export function Header() {
             <Link href="/faqs" className="nav-link">FAQs</Link>
           </nav>
 
-          <Link href="/contact" className="btn-primary text-xs md:text-sm">
+          <a href="/contact" className="btn-primary text-xs md:text-sm">
             Request Service
-          </Link>
+          </a>
         </div>
       </header>
     </>

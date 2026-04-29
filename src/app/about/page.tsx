@@ -6,7 +6,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'About Allscape Services',
-  description: `Established in ${business.established}, Allscape Services is a Northern Illinois &amp; Southern Wisconsin outdoor services company serving ${business.customerCount} homeowners.`,
+  description: `Established in ${business.established}, Allscape Services is a Northern Illinois & Southern Wisconsin outdoor services company serving ${business.customerCount} homeowners.`,
 };
 
 export default function AboutPage() {
@@ -67,15 +67,15 @@ export default function AboutPage() {
 
           <div className="border-t border-line pt-10 mt-12">
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="/contact" className="btn-primary">
+              <a href="/contact" className="btn-primary">
                 Request Service
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/contact"
                 className="border-2 border-green text-green px-7 py-3 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-green hover:text-white transition-all"
               >
                 Request a Quote
-              </Link>
+              </a>
             </div>
           </div>
         </div>

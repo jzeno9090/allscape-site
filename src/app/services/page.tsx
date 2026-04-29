@@ -7,7 +7,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Our Services',
   description:
-    'Professional lawn irrigation, landscape lighting, holiday lighting, and paver restoration services in Northern Illinois &amp; Southern Wisconsin.',
+    'Professional lawn irrigation, landscape lighting, holiday lighting, and paver restoration services in Northern Illinois & Southern Wisconsin.',
 };
 
 const cardImages: Record<string, string> = {
@@ -80,12 +80,12 @@ export default function ServicesPage() {
             Get a free, no-pressure quote on any of our services.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+            <a href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
               Request Service
-            </Link>
-            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
+            </a>
+            <a href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
               Request a Quote
-            </Link>
+            </a>
           </div>
         </div>
       </section>

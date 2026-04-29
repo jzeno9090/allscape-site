@@ -58,12 +58,20 @@ export default function ReviewsPage() {
           <p className="text-white/90 mb-8">
             Free quotes. No pressure. We&apos;ll come out and tell you exactly what we&apos;d do.
           </p>
-          <Link
-            href="/contact"
-            className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all"
-          >
-            Request Service
-          </Link>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all"
+            >
+              Request Service
+            </Link>
+            <Link
+              href="/contact"
+              className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all"
+            >
+              Request a Quote
+            </Link>
+          </div>
         </div>
       </section>
     </>

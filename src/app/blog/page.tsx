@@ -17,9 +17,17 @@ export default function BlogPage() {
         <p className="text-lg text-gray-warm leading-relaxed mb-10">
           Tips, guides, and insights on outdoor services in Northern Illinois & Southern Wisconsin — coming soon.
         </p>
-        <Link href="/contact" className="btn-primary">
-          Request a Quote
-        </Link>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link href="/contact" className="btn-primary">
+            Request Service
+          </Link>
+          <Link
+            href="/contact"
+            className="border-2 border-green text-green px-7 py-3 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-green hover:text-white transition-all"
+          >
+            Request a Quote
+          </Link>
+        </div>
       </div>
     </section>
   );

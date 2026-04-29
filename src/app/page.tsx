@@ -46,7 +46,13 @@ export default function HomePage() {
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link href="/contact" className="btn-primary">
-              Get Your Free Quote
+              Request Service
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-white/10 backdrop-blur border-2 border-white text-white px-7 py-3.5 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green-ink transition-all"
+            >
+              Request a Quote
             </Link>
             <a
               href={`tel:${business.phoneRaw}`}
@@ -173,6 +179,9 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+              Request Service
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
               Request a Quote
             </Link>
             <a href={`tel:${business.phoneRaw}`} className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">

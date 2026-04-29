@@ -79,9 +79,14 @@ export default function ServicesPage() {
           <p className="text-white/90 mb-8 max-w-2xl mx-auto">
             Get a free, no-pressure quote on any of our services.
           </p>
-          <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
-            Get Your Free Quote
-          </Link>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link href="/contact" className="bg-white text-green px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md shadow-lg hover:bg-green-ink hover:text-white transition-all">
+              Request Service
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-4 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-white hover:text-green transition-all">
+              Request a Quote
+            </Link>
+          </div>
         </div>
       </section>
     </>

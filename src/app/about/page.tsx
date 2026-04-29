@@ -44,9 +44,17 @@ export default function AboutPage() {
           </div>
 
           <div className="border-t border-line pt-10 mt-12">
-            <Link href="/contact" className="btn-primary">
-              Request a Quote
-            </Link>
+            <div className="flex flex-wrap items-center gap-4">
+              <Link href="/contact" className="btn-primary">
+                Request Service
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-green text-green px-7 py-3 text-sm tracking-wide font-bold uppercase rounded-md hover:bg-green hover:text-white transition-all"
+              >
+                Request a Quote
+              </Link>
+            </div>
           </div>
         </div>
       </section>

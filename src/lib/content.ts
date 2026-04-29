@@ -1,13 +1,15 @@
 import businessData from '@/content/business.json';
 import servicesData from '@/content/services.json';
 import citiesData from '@/content/cities.json';
-import type { Business, Service, City } from './types';
+import reviewsData from '@/content/reviews.json';
+import type { Business, Service, City, Review } from './types';
 
-export type { Business, Service, City } from './types';
+export type { Business, Service, City, Review } from './types';
 
 export const business: Business = businessData;
 export const services: Service[] = servicesData.services;
 export const cities: City[] = citiesData.cities;
+export const reviews: Review[] = reviewsData.reviews;
 
 export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);

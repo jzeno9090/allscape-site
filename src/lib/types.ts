@@ -71,3 +71,9 @@ export interface City {
   lat: number;
   lng: number;
 }
+
+export interface Review {
+  name: string;
+  date: string;
+  body: string;
+}

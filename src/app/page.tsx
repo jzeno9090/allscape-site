@@ -66,12 +66,11 @@ export default function HomePage() {
           <div className="text-center mb-14">
             <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">Our Services</div>
             <h2 className="font-display text-4xl md:text-5xl text-green-ink">
-              Four specialties. Done right.
+              Specialized work since {business.established}.
             </h2>
             <p className="text-gray-warm mt-5 max-w-2xl mx-auto leading-relaxed">
-              We don&apos;t try to be everything. We specialize in four outdoor services and do them better than
-              anyone in Northern Illinois &amp; Southern Wisconsin — backed by {business.yearsInBusiness}+ years of refinement and a
-              workmanship guarantee.
+              {business.yearsInBusiness}+ years across Northern Illinois &amp; Southern Wisconsin, backed by a workmanship
+              guarantee.
             </p>
           </div>
 
@@ -153,11 +152,13 @@ export default function HomePage() {
             ★ ★ ★ ★ ★
           </div>
           <p className="font-display text-2xl md:text-3xl text-green-ink leading-[1.4] mb-8">
-            &ldquo;We&apos;ve used Allscape for irrigation, lighting, and our paver patio restoration. Reliable, professional,
-            and they treat your yard like their own. Wouldn&apos;t use anyone else.&rdquo;
+            &ldquo;I spoke to Joe about renovating a very old sprinkler system, their team came out to install today.
+            I can see why they have so many 5 star reviews. A great install team, very thorough and made sure I
+            understood how everything worked before they left. Thanks for the great job and excellent customer
+            service!&rdquo;
           </p>
-          <div className="font-bold text-green-ink">M. Davidson</div>
-          <div className="text-gray-warm text-sm">Lake Forest · Customer since 2018</div>
+          <div className="font-bold text-green-ink">Rebecca Wiegman</div>
+          <div className="text-gray-warm text-sm">June 2025</div>
         </div>
       </section>
 

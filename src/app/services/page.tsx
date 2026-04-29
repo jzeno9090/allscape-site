@@ -31,11 +31,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Our Services</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-green-ink leading-[1.05] mb-6 max-w-4xl">
-            Four specialties. Done right.
+            Lawn irrigation, landscape lighting, holiday lighting, and paver restoration.
           </h1>
           <p className="text-lg text-gray-warm max-w-2xl leading-relaxed">
-            We focus on four outdoor services and refuse to dilute that with anything else. After {business.yearsInBusiness}+
-            years, this is what we do better than anyone in Northern Illinois &amp; Southern Wisconsin.
+            Serving Northern Illinois &amp; Southern Wisconsin homeowners since {business.established}.
           </p>
         </div>
       </section>

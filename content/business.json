@@ -1,0 +1,42 @@
+{
+  "name": "Allscape Services",
+  "legalName": "Allscape Services LLC",
+  "tagline": "Sprinkler systems, landscape lighting, holiday lighting & paver restoration — done right. Serving Northern Illinois since 2000.",
+  "shortTagline": "Outdoor service you can trust.",
+  "established": 2000,
+  "yearsInBusiness": 26,
+  "customerCount": "1,000+",
+  "rating": "4.9",
+  "phone": "(847) 769-9529",
+  "phoneRaw": "8477699529",
+  "email": "info@allscapeservices.com",
+  "address": {
+    "street": "452 Scotland Rd #D",
+    "city": "Lakemoor",
+    "state": "IL",
+    "zip": "60051",
+    "full": "452 Scotland Rd #D, Lakemoor, IL 60051"
+  },
+  "geo": {
+    "latitude": 42.3211,
+    "longitude": -88.1856
+  },
+  "hours": {
+    "weekday": "Mon–Fri 8:00 AM – 5:00 PM",
+    "saturday": "Sat by appointment",
+    "sunday": "Closed"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "google": ""
+  },
+  "domain": "allscapeservices.com",
+  "url": "https://www.allscapeservices.com",
+  "areaServed": "Northern Illinois",
+  "counties": ["Lake County", "McHenry County", "Cook County", "Kane County"],
+  "certifications": [
+    "Inception Certified Installer",
+    "Licensed & Insured"
+  ]
+}

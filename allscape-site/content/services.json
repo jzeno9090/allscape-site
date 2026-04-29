@@ -1,0 +1,185 @@
+{
+  "services": [
+    {
+      "slug": "lawn-irrigation",
+      "title": "Lawn Irrigation",
+      "shortTitle": "Irrigation",
+      "romanNumeral": "i",
+      "tagline": "Custom-designed sprinkler systems engineered for your lawn's specific zones, slopes, and soil. Installation, maintenance, repair, and seasonal service.",
+      "shortDescription": "Custom sprinkler systems designed, installed, and maintained for Northern Illinois lawns.",
+      "metaTitle": "Lawn Irrigation & Sprinkler Systems in Northern Illinois | Allscape Services",
+      "metaDescription": "Professional sprinkler system design, installation, and maintenance. Custom irrigation built for Northern Illinois soil and climate. Free quotes since 2000.",
+      "h1": "Lawn Irrigation in Northern Illinois",
+      "subheadings": [
+        {
+          "title": "Sprinkler System Installation",
+          "body": "Every yard is different. We custom-design irrigation systems with the right zones, head types, and pressure for your lawn's specific layout, slopes, and soil conditions. Our installs are clean, properly buried, and built to last."
+        },
+        {
+          "title": "Maintenance & Repair",
+          "body": "Whether your existing system needs a tune-up, a broken head replaced, or zone troubleshooting, we service all major brands. Annual maintenance plans available."
+        },
+        {
+          "title": "Spring Start-Up & Winterization",
+          "body": "Northern Illinois winters are hard on irrigation. We handle proper blow-outs in fall and full system pressure-up and inspection in spring."
+        },
+        {
+          "title": "Backflow Testing",
+          "body": "Required annually in Illinois for any property with an irrigation system. We perform certified RPZ backflow testing and submit results to your municipality."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "How much does a sprinkler system cost in Northern Illinois?",
+          "answer": "Most residential systems range from $3,500–$7,500 depending on yard size, zone count, and complexity. We provide free on-site quotes."
+        },
+        {
+          "question": "How long does installation take?",
+          "answer": "Most residential installs take 1–2 days. We coordinate with utility locates and work efficiently to minimize disruption to your yard."
+        },
+        {
+          "question": "Do you service systems you didn't install?",
+          "answer": "Yes. We service all major brands and can troubleshoot, repair, or upgrade existing systems regardless of original installer."
+        },
+        {
+          "question": "When should I schedule winterization?",
+          "answer": "We recommend booking by late September to ensure your system is blown out before the first hard freeze in mid-to-late October."
+        }
+      ]
+    },
+    {
+      "slug": "landscape-lighting",
+      "title": "Landscape Lighting",
+      "shortTitle": "Lighting",
+      "romanNumeral": "ii",
+      "tagline": "Professional path lighting, uplighting, and architectural illumination. Designed to extend your home's curb appeal long after sunset.",
+      "shortDescription": "Path lighting, uplighting, wash lights — designed and installed to bring your yard to life after dark.",
+      "metaTitle": "Landscape Lighting Installation in Northern Illinois | Allscape Services",
+      "metaDescription": "Professional landscape lighting design and installation. Path lights, uplighting, architectural illumination. Serving Northern Illinois since 2000.",
+      "h1": "Landscape Lighting in Northern Illinois",
+      "subheadings": [
+        {
+          "title": "Path & Walkway Lighting",
+          "body": "Safe, beautiful illumination for walkways, garden paths, and entryways. Low-voltage LED systems that look great and run efficiently year-round."
+        },
+        {
+          "title": "Architectural Uplighting",
+          "body": "Highlight the best features of your home — facades, columns, mature trees, and key architectural elements. Designed to flatter your house, not flood it."
+        },
+        {
+          "title": "Garden & Feature Lighting",
+          "body": "Wash lights for plantings, downlights from trees for moonlight effects, accent lighting for water features and focal points."
+        },
+        {
+          "title": "Maintenance & Upgrades",
+          "body": "We service existing landscape lighting systems — bulb replacements, transformer issues, fixture upgrades from halogen to LED, and timer/photocell tuning."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Are your systems LED?",
+          "answer": "Yes. All new installs use low-voltage LED fixtures — they last longer, run cooler, use a fraction of the power, and look better than halogen."
+        },
+        {
+          "question": "How much does landscape lighting cost?",
+          "answer": "Most residential projects range from $2,500–$8,000 depending on the number of fixtures and complexity. We provide free in-person consultations."
+        },
+        {
+          "question": "Will it work in winter?",
+          "answer": "Yes. LED systems function in any temperature. We bury wiring at proper depth so freezing isn't an issue."
+        }
+      ]
+    },
+    {
+      "slug": "holiday-lighting",
+      "title": "Holiday Lighting",
+      "shortTitle": "Holiday",
+      "romanNumeral": "iii",
+      "tagline": "Seasonal Christmas lighting installation and removal. Permanent year-round programmable systems available — Inception certified installer.",
+      "shortDescription": "Seasonal install, takedown, and storage. Permanent year-round systems available.",
+      "metaTitle": "Holiday & Christmas Lighting Installation in Northern Illinois | Allscape Services",
+      "metaDescription": "Professional holiday lighting installation, takedown, and storage. Plus permanent year-round programmable systems. Inception certified installer in Northern Illinois.",
+      "h1": "Holiday Lighting in Northern Illinois",
+      "subheadings": [
+        {
+          "title": "Seasonal Christmas Lighting",
+          "body": "Our flagship holiday service. We design, install, take down, and store your Christmas lighting display each year. Roof lines, trees, wreaths, garlands, and yard features. You provide the lights or use ours — either way, we handle every step."
+        },
+        {
+          "title": "Annual Takedown & Storage",
+          "body": "After the holidays, we return to remove every light, wrap and label them properly, and store them in our facility for next year. No tangles, no climbing, no dragging boxes from the attic."
+        },
+        {
+          "title": "Permanent Year-Round Lighting",
+          "body": "For homeowners who want lighting that stays up year-round and changes with the seasons. We're a certified Inception installer and also work with Trimlight, Jellyfish, Gemstone, Everlight, and Oelo. App-controlled, programmable color and pattern, hidden under the eave."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "When should I book seasonal Christmas lighting?",
+          "answer": "Earlier is better — our calendar fills by October. We start installs in early November and run through early December."
+        },
+        {
+          "question": "What's the difference between seasonal and permanent lighting?",
+          "answer": "Seasonal lighting is installed in November and removed in January. Permanent lighting stays up year-round, hidden under your eave, and is controlled by an app for any color, pattern, or holiday."
+        },
+        {
+          "question": "Do you install retail brands like Govee or Twinkly?",
+          "answer": "No. We only install professional, permanent-mount systems built for outdoor durability and warranty support — Inception, Trimlight, Jellyfish, Gemstone, Everlight, and Oelo."
+        },
+        {
+          "question": "Do you store the lights between seasons?",
+          "answer": "Yes. After takedown, we wrap, label, and store everything at our facility so it's ready for next year's install — no clutter in your garage."
+        }
+      ]
+    },
+    {
+      "slug": "paver-restoration",
+      "title": "Paver Restoration",
+      "shortTitle": "Pavers",
+      "romanNumeral": "iv",
+      "tagline": "Professional cleaning, polymeric re-sanding, sealing, and re-leveling of brick paver patios, walkways, and driveways. Bring tired pavers back to life.",
+      "shortDescription": "Cleaning, re-leveling, polymeric re-sanding, and sealing — bringing tired pavers back to life.",
+      "metaTitle": "Brick Paver Cleaning, Sealing & Restoration in Northern Illinois | Allscape Services",
+      "metaDescription": "Professional brick paver restoration in Northern Illinois. Cleaning, re-leveling, polymeric re-sanding, and sealing for patios, walkways, and driveways.",
+      "h1": "Brick Paver Cleaning, Sealing & Restoration in Northern Illinois",
+      "subheadings": [
+        {
+          "title": "Power Washing & Deep Cleaning",
+          "body": "Years of grime, mildew, moss, and weeds disappear with our professional cleaning process. We remove stains and old joint sand, leaving your pavers ready for proper restoration."
+        },
+        {
+          "title": "Re-Leveling",
+          "body": "Sunken or shifted pavers? We carefully lift, re-base, and re-set them so your patio or walkway is flat, stable, and safe to walk on."
+        },
+        {
+          "title": "Polymeric Re-Sanding",
+          "body": "We replace failed joint sand with high-grade polymeric sand. Once activated, it locks pavers in place, stops weed growth, and prevents wash-out for years."
+        },
+        {
+          "title": "Sealing",
+          "body": "Premium sealers protect your investment from UV fade, stains, and freeze-thaw damage. Wet-look finishes available to enhance natural color depth."
+        }
+      ],
+      "important_note": "We do paver restoration, not new paver installation. If your existing patio, walkway, or driveway needs to be cleaned, leveled, re-sanded, or sealed — we're your team. For new paver installations, we can refer you to a trusted partner.",
+      "faqs": [
+        {
+          "question": "How often should pavers be cleaned and sealed?",
+          "answer": "In the Chicago/Northern Illinois climate, every 3–5 years is typical. Our freeze-thaw cycles and road salt are hard on paver joints, so regular maintenance is the difference between pavers that last 20+ years and ones that fail in 10."
+        },
+        {
+          "question": "Do you install new pavers?",
+          "answer": "No. We focus on restoration only — cleaning, re-leveling, polymeric re-sanding, and sealing of existing brick paver surfaces. For new installs, we can refer you to a trusted local partner."
+        },
+        {
+          "question": "Will sealing make my pavers slippery?",
+          "answer": "No. The sealers we use are formulated for outdoor traffic and don't reduce traction in wet conditions."
+        },
+        {
+          "question": "How much does paver restoration cost?",
+          "answer": "A typical patio restoration ranges $500–$2,500 depending on square footage, condition, and which steps are needed. Free quotes always."
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { services } from '@/lib/content';
+import { business, services } from '@/lib/content';
+import { JsonLd } from '@/components/JsonLd';
+import { breadcrumbSchema, faqsPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
@@ -10,6 +12,16 @@ export const metadata: Metadata = {
 export default function FaqsPage() {
   return (
     <>
+      <JsonLd
+        data={[
+          faqsPageSchema(services),
+          breadcrumbSchema([
+            { name: 'Home', url: business.url },
+            { name: 'FAQs', url: `${business.url}/faqs` },
+          ]),
+        ]}
+      />
+
       <section className="bg-paper py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">FAQs</div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { business, reviews } from '@/lib/content';
+import { JsonLd } from '@/components/JsonLd';
+import { breadcrumbSchema, reviewsPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Customer Reviews',
@@ -15,6 +16,16 @@ export default function ReviewsPage() {
 
   return (
     <>
+      <JsonLd
+        data={[
+          reviewsPageSchema(sorted),
+          breadcrumbSchema([
+            { name: 'Home', url: business.url },
+            { name: 'Reviews', url: `${business.url}/reviews` },
+          ]),
+        ]}
+      />
+
       <section className="bg-paper py-20 lg:py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Customer Voices</div>

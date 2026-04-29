@@ -1,6 +1,6 @@
 # Allscape Services — Website
 
-The official website for [Allscape Services LLC](https://allscapeservices.com), an outdoor services company serving Northern Illinois since 2000.
+The official website for [JZ Allscape Services LLC](https://allscapeservices.com), serving Northern Illinois & Southern Wisconsin since 2000.
 
 Built with **Next.js 15** + **Tailwind CSS** + **TypeScript**, deployed on **Vercel**.
 
@@ -8,17 +8,17 @@ Built with **Next.js 15** + **Tailwind CSS** + **TypeScript**, deployed on **Ver
 
 ## Tech stack
 
-- **Framework:** Next.js 15 (App Router, React Server Components)
-- **Styling:** Tailwind CSS 3.4
+- **Framework:** Next.js 15 (App Router, React Server Components, React 19)
+- **Styling:** Tailwind CSS 3.4 — Plus Jakarta Sans (single font family)
 - **Language:** TypeScript
 - **Hosting:** Vercel
 - **Content:** JSON files in `/content` (no CMS)
-- **Photos:** Supabase Storage (`allscape-public` bucket)
+- **Lead capture:** Jobber Work Request embed at `/contact`
 
 ## Quick start
 
 ```bash
-npm install
+npm install --legacy-peer-deps
 npm run dev          # → http://localhost:3000
 npm run build        # production build
 npm run type-check   # TypeScript check
@@ -29,43 +29,47 @@ npm run type-check   # TypeScript check
 ```
 allscape-site/
 ├── content/                      ← Source-of-truth content (edit here)
-│   ├── business.json             ← NAP, hours, brand info
-│   ├── services.json             ← 4 services with full content
-│   └── cities.json               ← 70 cities with coordinates
+│   ├── business.json             ← NAP, hours, brand info, legal entity
+│   ├── services.json             ← 4 services with subheadings + FAQs
+│   ├── cities.json               ← 78 cities (70 IL + 8 WI Walworth)
+│   ├── reviews.json              ← Curated customer reviews
+│   └── plumbers.json             ← RPZ plumber directory by city
+│
+├── public/
+│   ├── images/                   ← Logo, hero photos, service cards
+│   └── videos/                   ← Homepage hero + lawn-irrigation hero
 │
 ├── src/
 │   ├── app/                      ← Next.js App Router pages
 │   │   ├── layout.tsx            ← Root layout (header/footer/SEO)
-│   │   ├── page.tsx              ← Homepage
+│   │   ├── page.tsx              ← Homepage (video hero)
 │   │   ├── globals.css
 │   │   ├── sitemap.ts            ← Auto-generated sitemap
 │   │   ├── robots.ts             ← Auto-generated robots.txt
-│   │   ├── about/
-│   │   ├── contact/
-│   │   ├── reviews/
-│   │   ├── faqs/
-│   │   ├── blog/
-│   │   ├── privacy/
-│   │   ├── terms/
+│   │   ├── about/, faqs/, reviews/, contact/, privacy/, terms/
+│   │   ├── rpz-plumbers-by-city/
 │   │   ├── services/
 │   │   │   ├── page.tsx          ← /services index
-│   │   │   └── [slug]/page.tsx   ← Service detail template
+│   │   │   └── [slug]/page.tsx   ← Service detail (× 4)
 │   │   └── service-areas/
 │   │       ├── page.tsx          ← /service-areas index
-│   │       └── [city]/page.tsx   ← City template (× 70)
+│   │       └── [city]/page.tsx   ← City detail (× 78)
 │   │
 │   ├── components/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── JsonLd.tsx
+│   │   ├── Header.tsx            ← Top bar + main nav, "Request Service" CTA
+│   │   ├── Footer.tsx            ← Dark green footer
+│   │   ├── JsonLd.tsx            ← JSON-LD injector
+│   │   └── JobberRequestForm.tsx ← Jobber embed wrapper
 │   │
 │   └── lib/
 │       ├── content.ts            ← Content loaders
-│       ├── schema.ts             ← JSON-LD schema generators
+│       ├── schema.ts             ← JSON-LD generators (LocalBusiness,
+│       │                           citySchema, serviceSchema, FAQPage,
+│       │                           reviewsPageSchema, breadcrumb)
 │       └── types.ts
 │
-├── next.config.js                ← 301 redirects from old Squarespace URLs
-├── tailwind.config.ts            ← Brand tokens
+├── next.config.js                ← 70+ 301 redirects from old URLs
+├── tailwind.config.ts            ← Brand tokens (green palette)
 └── package.json
 ```
 
@@ -73,38 +77,52 @@ allscape-site/
 
 All content lives in `/content/*.json`. Edit, commit, push — Vercel auto-deploys.
 
-**Update business info** → `content/business.json`
-**Update service content** → `content/services.json`
-**Add a city** → `content/cities.json` (new entry generates a new page automatically)
-**Add a redirect** → `next.config.js`
+| Want to change | File |
+|---|---|
+| Phone, address, hours, legal name | `content/business.json` |
+| Service text, FAQs | `content/services.json` |
+| Add/remove cities | `content/cities.json` (set `"state": "WI"` for Wisconsin towns) |
+| Reviews list | `content/reviews.json` |
+| RPZ plumbers | `content/plumbers.json` |
+| Add a redirect | `next.config.js` |
+
+## Critical rules
+
+- **Request CTAs use `<a href="/contact">`, NEVER `<Link>`.** Jobber's third-party script doesn't survive Next.js SPA navigation.
+- **Always pair "Northern Illinois" with "& Southern Wisconsin"** in copy and metadata.
+- **`&amp;` ONLY in JSX text content**, never in TS string literals (metadata descriptions output literal `&amp;` if encoded).
+- **City pages use `city.state ?? 'IL'`** for state code.
+- **No booking on the website** — only request forms. Booking happens in Jobber/Zesight.
 
 ## SEO built in
 
 - Server-rendered HTML
-- LocalBusiness JSON-LD on every page
-- Per-city schema with city-specific `areaServed`
-- FAQPage schema on every service page
+- LocalBusiness JSON-LD on every page (areaServed dynamically derived from cities.json)
+- Per-city schema with city-specific `areaServed` + lat/lng
+- FAQPage schema on every service page + sitewide `/faqs`
+- Review/CollectionPage schema on `/reviews`
 - BreadcrumbList schema everywhere
-- Auto sitemap with all 70+ city pages
-- 301 redirects from every old Squarespace URL
+- Auto sitemap with all 78 city pages
+- 70+ 301 redirects from old Squarespace URLs (drainage, hardscapes, christmas-lights, every IL city slug)
 - Open Graph + Twitter cards
 - Canonical URLs
 
 ## Deploying to Vercel
 
-1. Push code to GitHub
-2. Visit vercel.com/new, connect your repo, click Deploy
-3. Add custom domain `allscapeservices.com` in Vercel settings
+1. Push to GitHub `jzeno9090/allscape-site`
+2. Vercel auto-deploys from `main`
+3. Custom domain `allscapeservices.com` connected via single A record → `216.198.79.1` (Vercel anycast IP)
 4. Submit `https://allscapeservices.com/sitemap.xml` to Google Search Console
 
 ## Brand
 
-- Navy `#0f1e2d` · Gold `#c9a449` · Paper `#fcfbf7`
-- Display font: Source Serif 4
-- Body font: Manrope
-- Tagline: "Sprinkler systems, landscape lighting, holiday lighting, and paver restoration. Serving Northern Illinois & Southern Wisconsin since 2000."
-- DO NOT use "family-owned" anywhere.
+- **Greens** (from logo): `#4ea03c` brand · `#1a4d2a` deep · `#0d2818` ink · `#c5e2b3` soft
+- **Paper:** `#fcfbf7` · `#f4f0e8` warm
+- **Font:** Plus Jakarta Sans (display + body)
+- **Tagline:** "Sprinkler systems, landscape lighting, holiday lighting & paver restoration — done right. Serving Northern Illinois & Southern Wisconsin since 2000."
+- **Don't use:** "family-owned" anywhere.
+- **Legal entity:** JZ Allscape Services LLC
 
 ## License
 
-© 2026 Allscape Services LLC. All rights reserved.
+© 2026 JZ Allscape Services LLC. All rights reserved.

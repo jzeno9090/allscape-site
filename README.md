@@ -102,7 +102,7 @@ All content lives in `/content/*.json`. Edit, commit, push — Vercel auto-deplo
 - Navy `#0f1e2d` · Gold `#c9a449` · Paper `#fcfbf7`
 - Display font: Source Serif 4
 - Body font: Manrope
-- Tagline: "Sprinkler systems, landscape lighting, holiday lighting & paver restoration — done right. Serving Northern Illinois since 2000."
+- Tagline: "Sprinkler systems, landscape lighting, holiday lighting, and paver restoration. Serving Northern Illinois & Southern Wisconsin since 2000."
 - DO NOT use "family-owned" anywhere.
 
 ## License

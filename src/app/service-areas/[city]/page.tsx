@@ -87,7 +87,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </h1>
 
               <p className="text-lg text-gray-warm leading-relaxed max-w-2xl mb-8">
-                Sprinkler systems, landscape lighting, holiday lighting, and paver restoration — done right. Serving
+                Sprinkler systems, landscape lighting, holiday lighting, and paver restoration. Serving
                 {' '}{city.name} homeowners since {business.established}.
               </p>
 
@@ -141,7 +141,7 @@ export default async function CityPage({ params }: CityPageProps) {
               Services in {city.name}
             </div>
             <h2 className="font-display text-4xl md:text-5xl text-green-ink leading-[1.1]">
-              Four specialties. Done right.
+              Lawn irrigation, landscape lighting, holiday lighting, and paver restoration.
             </h2>
           </div>
 

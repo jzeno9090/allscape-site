@@ -41,7 +41,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-white/95 text-lg md:text-xl max-w-2xl mx-auto mt-7 leading-relaxed drop-shadow">
-            Done right in Northern Illinois &amp; Southern Wisconsin since {business.established}.
+            Serving Northern Illinois &amp; Southern Wisconsin since {business.established}.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

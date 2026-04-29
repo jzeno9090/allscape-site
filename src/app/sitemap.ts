@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${business.url}/reviews`, priority: 0.7, changeFrequency: 'weekly' as const },
     { url: `${business.url}/faqs`, priority: 0.7, changeFrequency: 'monthly' as const },
     { url: `${business.url}/contact`, priority: 0.8, changeFrequency: 'monthly' as const },
-    { url: `${business.url}/blog`, priority: 0.6, changeFrequency: 'weekly' as const },
+    { url: `${business.url}/rpz-plumbers-by-city`, priority: 0.5, changeFrequency: 'monthly' as const },
   ].map((p) => ({ ...p, lastModified: now }));
 
   const servicePages = services.map((service) => ({

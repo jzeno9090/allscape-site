@@ -33,8 +33,7 @@ export default function RpzPlumbersPage() {
             We don&apos;t do RPZ testing in-house.
           </p>
           <p className="text-sm text-gray-warm leading-relaxed max-w-2xl">
-            Below is the list of plumbers we&apos;ve worked with in each city. Pricing for RPZ testing in
-            Northern Illinois typically runs $90–$125. Call us at{' '}
+            Below is the list of plumbers we&apos;ve worked with in each city. Call us at{' '}
             <a href={`tel:${business.phoneRaw}`} className="text-green-ink font-bold border-b border-green hover:text-green">
               {business.phone}
             </a>{' '}

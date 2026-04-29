@@ -10,7 +10,7 @@ A complete Next.js 15 + Tailwind website with:
 - Homepage (Direction 2: Clean & Trustworthy)
 - 4 service pages (lawn irrigation, landscape lighting, holiday lighting, paver restoration)
 - 73 city pages, auto-generated from `content/cities.json`
-- About, Reviews, FAQs, Blog, Contact, Privacy, Terms
+- About, Reviews, FAQs, Contact, RPZ Plumbers by City, Privacy, Terms
 - Auto sitemap + robots.txt
 - LocalBusiness JSON-LD schema on every page (per-city schema on city pages)
 - All 70+ 301 redirects from old Squarespace URLs preserved

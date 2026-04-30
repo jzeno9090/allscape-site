@@ -45,6 +45,7 @@ export function localBusinessSchema() {
       longitude: business.geo.longitude,
     },
     areaServed: serviceAreas(),
+    sameAs: [business.social.facebook, business.social.instagram, business.social.google].filter(Boolean),
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',

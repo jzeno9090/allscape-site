@@ -196,8 +196,55 @@
       "metaTitle": "Yard Drainage in Northern Illinois & Southern Wisconsin | Allscape Services",
       "metaDescription": "Yard drainage solutions for low spots, soggy lawns, downspout overflow, and surface runoff. Serving Northern Illinois & Southern Wisconsin homeowners since 2000.",
       "h1": "Yard Drainage in Northern Illinois & Southern Wisconsin",
-      "subheadings": [],
-      "faqs": []
+      "important_note": "We do French drains, surface drainage, downspout work, catch basins, rain gardens, and rock gardens. We do not regrade and we do not do foundation work. For projects that require major earth movement, grade changes, or foundation waterproofing, we'd recommend bringing in a contractor who specializes in that work.",
+      "subheadings": [
+        {
+          "title": "French Drains",
+          "body": "French drains move water underground via perforated pipe surrounded by gravel. They're the standard solution for chronically saturated soil and persistent low spots that can't be addressed at the surface."
+        },
+        {
+          "title": "Surface Drainage",
+          "body": "Surface drainage uses swales, channels, and surface inlets to move standing water off the yard along the existing grade. It works when there's a clear path the water can follow once the route is established."
+        },
+        {
+          "title": "Downspout Work",
+          "body": "Downspouts dumping water close to the house are a common cause of saturated beds, soggy lawn areas, and overflow during heavy rain. Extensions, buried piping to pop-up emitters, or routed runs to a discharge point move that water to where it belongs."
+        },
+        {
+          "title": "Catch Basins",
+          "body": "Catch basins are surface inlets with a grate top and a piped outlet. They're useful where surface water collects in a low point — driveway aprons, patios, and yard depressions — and needs to be routed somewhere it won't pool."
+        },
+        {
+          "title": "Rain Gardens",
+          "body": "Rain gardens are shallow planted depressions designed to absorb and slowly infiltrate runoff. They handle roof and driveway runoff while doubling as a designed planting bed, and they reduce the load on traditional drainage routes."
+        },
+        {
+          "title": "Rock Gardens",
+          "body": "Dry-creek-style rock gardens combine drainage function with landscape aesthetics. They route surface water along a stone channel while integrating into the planting design — a good choice where a rain garden isn't suitable."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Why does my yard have standing water after rain?",
+          "answer": "Common causes are soil compaction, low spots in the existing grade, downspouts dumping water too close to the house, or clay layers below the surface that slow infiltration. The right fix depends on what's driving it — French drains, downspout extensions, surface inlets, and rain gardens each address different causes."
+        },
+        {
+          "question": "What's the difference between a French drain and surface drainage?",
+          "answer": "French drains move water underground via perforated pipe and gravel. Surface drainage moves water across the ground via swales and surface inlets. Each suits a different scenario — the right choice depends on soil type, slope, and where the water needs to discharge."
+        },
+        {
+          "question": "What kinds of drainage work don't you do?",
+          "answer": "We don't regrade and we don't do foundation work. We focus on French drains, surface drainage, downspout work, catch basins, rain gardens, and rock gardens. For regrading, major earth movement, or foundation waterproofing, we'd recommend a contractor who specializes in that work."
+        },
+        {
+          "question": "When is the best time of year for drainage work?",
+          "answer": "Most drainage installations happen between mid-spring (after the ground thaws and dries) and late fall (before hard freeze). A visit right after heavy rain can actually help diagnose the problem — it's easier to see where water collects and which way it flows."
+        },
+        {
+          "question": "Will I need a permit?",
+          "answer": "It varies by municipality. Larger grading projects, modifications to stormwater systems, or work in regulated wetlands often require permits. Smaller-scale installations like buried French drains or downspout extensions usually don't. We'll flag it before work starts if a permit applies."
+        }
+      ]
     }
   ]
 }

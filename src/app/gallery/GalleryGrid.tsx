@@ -94,7 +94,7 @@ export function GalleryGrid({ items, services }: Props) {
                       key={catSlug}
                       className="bg-green-soft text-green-ink text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded"
                     >
-                      {service.shortTitle}
+                      {service.title}
                     </span>
                   );
                 })}

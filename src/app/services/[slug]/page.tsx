@@ -150,6 +150,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
       )}
 
       {/* Subheadings */}
+      {service.subheadings.length > 0 && (
       <section className="bg-paper py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-10">
@@ -183,8 +184,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>
+      )}
 
       {/* FAQs */}
+      {service.faqs.length > 0 && (
       <section className="bg-paper-warm py-20 border-t border-line">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-12 gap-10">
@@ -210,6 +213,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>
+      )}
 
       {/* CTA */}
       <section className="bg-green py-16">

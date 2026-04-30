@@ -16,7 +16,7 @@ export function Footer() {
             </div>
             <p className="text-sm leading-relaxed">
               Outdoor service experts serving Northern Illinois &amp; Southern Wisconsin homeowners since {business.established}. Lawn
-              irrigation, landscape lighting, holiday lighting, and paver restoration.
+              irrigation, landscape lighting, holiday lighting, paver restoration, and drainage.
             </p>
           </div>
 

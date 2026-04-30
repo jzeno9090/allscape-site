@@ -10,7 +10,7 @@ const JOBBER_CLIENT_LOGIN =
 
 export const metadata: Metadata = {
   title: 'Submit a Request',
-  description: `Submit a request to Allscape Services for lawn irrigation, landscape lighting, holiday lighting, or paver restoration. Call ${business.phone} or fill out the form.`,
+  description: `Submit a request to Allscape Services for lawn irrigation, landscape lighting, holiday lighting, paver restoration, or drainage. Call ${business.phone} or fill out the form.`,
 };
 
 export default function ContactPage() {

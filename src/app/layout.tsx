@@ -11,7 +11,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL(business.url),
   title: {
-    default: `${business.name} — Lawn Irrigation, Landscape Lighting & Paver Restoration in Northern Illinois & Southern Wisconsin`,
+    default: `${business.name} — Lawn Irrigation, Landscape Lighting, Paver Restoration & Drainage in Northern Illinois & Southern Wisconsin`,
     template: `%s | ${business.name}`,
   },
   description: business.tagline,
@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   keywords: [
     'lawn irrigation',
     'sprinkler systems',
+    'yard drainage',
+    'french drains',
     'landscape lighting',
     'holiday lighting',
     'Christmas lighting',

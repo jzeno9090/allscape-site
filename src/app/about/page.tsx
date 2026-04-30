@@ -29,8 +29,8 @@ export default function AboutPage() {
           <div className="space-y-6">
             <p className="text-xl text-gray-warm leading-relaxed">
               Allscape Services was founded in {business.established} as a specialty outdoor services company.
-              Today we focus on services: lawn irrigation, landscape lighting, holiday lighting, and paver
-              restoration.
+              Today we focus on services: lawn irrigation, landscape lighting, holiday lighting,
+              paver restoration, and drainage.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">
               In 2021, Joseph Zeno acquired Allscape and has been reshaping the business since — upgrading

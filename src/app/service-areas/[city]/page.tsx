@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
   const st = city.state ?? 'IL';
   return {
     title: `Lawn Irrigation, Landscape Lighting & Paver Restoration in ${city.name}, ${st}`,
-    description: `Sprinkler systems, landscape lighting, holiday lighting, and paver restoration for ${city.name}, ${st} homeowners. Established outdoor service experts since ${business.established}.`,
+    description: `Sprinkler systems, landscape lighting, holiday lighting, paver restoration, and drainage for ${city.name}, ${st} homeowners. Established outdoor service experts since ${business.established}.`,
     alternates: {
       canonical: `${business.url}/service-areas/${city.slug}`,
     },
@@ -88,7 +88,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </h1>
 
               <p className="text-lg text-gray-warm leading-relaxed max-w-2xl mb-8">
-                Sprinkler systems, landscape lighting, holiday lighting, and paver restoration. Serving
+                Sprinkler systems, landscape lighting, holiday lighting, paver restoration, and drainage. Serving
                 {' '}{city.name} homeowners since {business.established}.
               </p>
 
@@ -154,11 +154,11 @@ export default async function CityPage({ params }: CityPageProps) {
               Services in {city.name}
             </div>
             <h2 className="font-display text-4xl md:text-5xl text-green-ink leading-[1.1]">
-              Lawn irrigation, landscape lighting, holiday lighting, and paver restoration.
+              Lawn irrigation, landscape lighting, holiday lighting, paver restoration, and drainage.
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {services.map((service) => (
               <Link
                 key={service.slug}
@@ -170,7 +170,7 @@ export default async function CityPage({ params }: CityPageProps) {
                     src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
                     alt={`${service.title} in ${city.name}, ${city.state ?? 'IL'} — ${service.shortDescription}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

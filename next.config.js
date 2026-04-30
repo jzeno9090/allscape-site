@@ -18,8 +18,7 @@ const nextConfig = {
   // 301 redirects from old Squarespace URLs to preserve SEO
   async redirects() {
     return [
-      // Discontinued service
-      { source: '/lawn-drainage', destination: '/services', permanent: true },
+      { source: '/lawn-drainage', destination: '/services/drainage', permanent: true },
 
       // Service URL renames
       { source: '/lawn-irrigation-systems', destination: '/services/lawn-irrigation', permanent: true },

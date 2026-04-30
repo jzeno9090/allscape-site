@@ -1,9 +1,9 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { business, services, gallery } from '@/lib/content';
 import { JsonLd } from '@/components/JsonLd';
 import { breadcrumbSchema } from '@/lib/schema';
+import { GalleryGrid } from './GalleryGrid';
 
 export const metadata: Metadata = {
   title: 'Project Gallery',
@@ -12,15 +12,6 @@ export const metadata: Metadata = {
     canonical: `${business.url}/gallery`,
   },
 };
-
-const categoryOrder = [
-  'lawn-irrigation',
-  'landscape-lighting',
-  'holiday-lighting',
-  'paver-restoration',
-  'drainage',
-  'gardens',
-];
 
 function imageGallerySchema() {
   return {
@@ -38,10 +29,6 @@ function imageGallerySchema() {
 }
 
 export default function GalleryPage() {
-  const categoriesPresent = categoryOrder.filter((slug) =>
-    gallery.some((item) => item.categories.includes(slug))
-  );
-
   return (
     <>
       <JsonLd
@@ -69,67 +56,7 @@ export default function GalleryPage() {
 
       <section className="bg-paper-warm py-16 border-t border-line">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs tracking-widest uppercase text-green font-bold mb-6">Filter by service</div>
-          <div className="flex flex-wrap gap-3 mb-12">
-            <a
-              href="#all"
-              className="bg-green text-white px-5 py-2.5 text-sm font-bold uppercase tracking-wide rounded-md shadow-sm"
-            >
-              All Projects
-            </a>
-            {categoriesPresent.map((slug) => {
-              const service = services.find((s) => s.slug === slug);
-              if (!service) return null;
-              return (
-                <a
-                  key={slug}
-                  href={`#${slug}`}
-                  className="bg-white border border-line text-green-ink hover:bg-green hover:text-white hover:border-green px-5 py-2.5 text-sm font-bold uppercase tracking-wide rounded-md transition-colors"
-                >
-                  {service.title}
-                </a>
-              );
-            })}
-          </div>
-
-          <div id="all" className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {gallery.map((item, idx) => (
-              <a
-                key={item.src}
-                href={item.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1 block"
-              >
-                <div className="aspect-[4/3] overflow-hidden bg-green-soft relative">
-                  <Image
-                    src={item.src}
-                    alt={item.alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    priority={idx < 6}
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex flex-wrap gap-1.5">
-                    {item.categories.map((catSlug) => {
-                      const service = services.find((s) => s.slug === catSlug);
-                      if (!service) return null;
-                      return (
-                        <span
-                          key={catSlug}
-                          className="bg-green-soft text-green-ink text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded"
-                        >
-                          {service.shortTitle}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+          <GalleryGrid items={gallery} services={services} />
         </div>
       </section>
 

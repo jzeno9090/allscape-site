@@ -88,3 +88,11 @@ export interface Review {
   date: string;
   body: string;
 }
+
+export interface GalleryItem {
+  src: string;
+  alt: string;
+  categories: string[];
+  width?: number;
+  height?: number;
+}

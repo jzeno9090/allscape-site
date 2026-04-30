@@ -28,8 +28,8 @@ export default function AboutPage() {
 
           <div className="space-y-6">
             <p className="text-xl text-gray-warm leading-relaxed">
-              Allscape Services was founded in {business.established} as a specialty outdoor services company.
-              Today we focus on services: lawn irrigation, landscape lighting, holiday lighting,
+              Allscape Services was founded in {business.established} as an outdoor services company.
+              Today we focus on lawn irrigation, landscape lighting, holiday lighting,
               paver restoration, drainage, and raised gardens.
             </p>
             <p className="text-lg text-gray-warm leading-relaxed">

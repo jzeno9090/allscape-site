@@ -57,6 +57,7 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-9">
             <Link href="/services" className="nav-link">Services</Link>
             <Link href="/service-areas" className="nav-link">Service Areas</Link>
+            <Link href="/gallery" className="nav-link">Gallery</Link>
             <Link href="/about" className="nav-link">About</Link>
             <Link href="/reviews" className="nav-link">Reviews</Link>
             <Link href="/faqs" className="nav-link">FAQs</Link>

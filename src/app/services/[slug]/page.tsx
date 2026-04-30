@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { business, services, getServiceBySlug } from '@/lib/content';
+import { business, services, getServiceBySlug, getGalleryByCategory } from '@/lib/content';
 import { JsonLd } from '@/components/JsonLd';
 import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 
@@ -52,6 +53,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
   if (!service) {
     notFound();
   }
+
+  const galleryItems = getGalleryByCategory(slug).slice(0, 6);
 
   return (
     <>
@@ -215,6 +218,48 @@ export default async function ServicePage({ params }: ServicePageProps) {
           </div>
         </div>
       </section>
+      )}
+
+      {galleryItems.length > 0 && (
+        <section className="bg-paper py-20 border-t border-line">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex items-end justify-between mb-10 gap-6 flex-wrap">
+              <div>
+                <div className="text-xs tracking-widest uppercase text-green font-bold mb-3">Recent Work</div>
+                <h2 className="font-display text-3xl md:text-4xl text-green-ink leading-[1.1]">
+                  {service.title} project gallery
+                </h2>
+              </div>
+              <Link
+                href="/gallery"
+                className="text-green font-bold border-b-2 border-green pb-1 text-sm uppercase tracking-wider hover:text-green-deep"
+              >
+                View full gallery →
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {galleryItems.map((item) => (
+                <a
+                  key={item.src}
+                  href={item.src}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all hover:-translate-y-1 block"
+                >
+                  <div className="aspect-[4/3] overflow-hidden bg-green-soft relative">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* CTA */}

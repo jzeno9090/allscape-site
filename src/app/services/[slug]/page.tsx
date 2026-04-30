@@ -38,6 +38,7 @@ const heroImages: Record<string, string> = {
   'holiday-lighting': '/images/card-holiday-lighting.jpg',
   'paver-restoration': '/images/card-paver-restoration.jpg',
   'drainage': '/images/card-drainage.jpg',
+  'gardens': '/images/card-gardens.jpg',
 };
 
 const heroVideos: Record<string, string> = {

@@ -245,6 +245,45 @@
           "answer": "It varies by municipality. Larger grading projects, modifications to stormwater systems, or work in regulated wetlands often require permits. Smaller-scale installations like buried French drains or downspout extensions usually don't. We'll flag it before work starts if a permit applies."
         }
       ]
+    },
+    {
+      "slug": "gardens",
+      "title": "Gardens",
+      "shortTitle": "Gardens",
+      "romanNumeral": "vi",
+      "tagline": "Raised garden bed installation, with the option to extend your existing sprinkler system to water the new beds.",
+      "shortDescription": "Raised garden bed installation with optional sprinkler integration.",
+      "metaTitle": "Raised Gardens in Northern Illinois & Southern Wisconsin | Allscape Services",
+      "metaDescription": "Raised garden bed installation, with optional integration into your existing irrigation system. Serving Northern Illinois & Southern Wisconsin homeowners since 2000.",
+      "h1": "Raised Gardens in Northern Illinois & Southern Wisconsin",
+      "subheadings": [
+        {
+          "title": "Raised Garden Bed Installation",
+          "body": "Site evaluation, raised bed installation, and soil mix. Whether you want a single bed for herbs or an arrangement of beds for vegetables, we handle the layout, leveling, and install."
+        },
+        {
+          "title": "Connecting Your Existing Sprinkler System",
+          "body": "If you already have an irrigation system, we can extend it to water your new raised beds. The bed zones run on their own schedule with drip emitters or micro-spray lines suited to the closer spacing and shorter watering cycles raised beds prefer — different from how lawn turf wants to be watered."
+        }
+      ],
+      "faqs": [
+        {
+          "question": "Can my existing sprinkler system water the raised beds?",
+          "answer": "Yes. If you already have a system installed, we can add a dedicated zone for the bed area with drip lines or micro-emitters. Raised beds want different watering than lawn turf — usually shorter, more frequent cycles — so the new zone runs on its own schedule."
+        },
+        {
+          "question": "When is the best time to install raised beds?",
+          "answer": "Spring and fall are the typical install windows. Late spring after the last frost lets you plant the bed immediately. Fall installs give the soil time to settle over winter, ready for spring planting."
+        },
+        {
+          "question": "What size raised beds work best?",
+          "answer": "Four feet wide is the standard — narrow enough that the center is reachable from either side without stepping on the soil. Lengths and heights vary based on the space and what you want to grow; taller beds (24 inches and up) are easier on the back and warm earlier in spring."
+        },
+        {
+          "question": "Do you handle the planting?",
+          "answer": "We focus on the bed install and the irrigation tie-in. For planting, ongoing care, and seasonal turnover, most customers handle it themselves or work with a landscape gardener."
+        }
+      ]
     }
   ]
 }

@@ -24,6 +24,8 @@ export const metadata: Metadata = {
     'sprinkler systems',
     'yard drainage',
     'french drains',
+    'raised gardens',
+    'raised garden beds',
     'landscape lighting',
     'holiday lighting',
     'Christmas lighting',

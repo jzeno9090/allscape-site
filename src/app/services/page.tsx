@@ -8,7 +8,7 @@ import { breadcrumbSchema } from '@/lib/schema';
 export const metadata: Metadata = {
   title: 'Our Services',
   description:
-    'Professional lawn irrigation, landscape lighting, holiday lighting, paver restoration, and drainage services in Northern Illinois & Southern Wisconsin.',
+    'Professional lawn irrigation, landscape lighting, holiday lighting, paver restoration, drainage, and raised garden services in Northern Illinois & Southern Wisconsin.',
 };
 
 const cardImages: Record<string, string> = {
@@ -17,6 +17,7 @@ const cardImages: Record<string, string> = {
   'holiday-lighting': '/images/card-holiday-lighting.jpg',
   'paver-restoration': '/images/card-paver-restoration.jpg',
   'drainage': '/images/card-drainage.jpg',
+  'gardens': '/images/card-gardens.jpg',
 };
 
 export default function ServicesPage() {
@@ -33,7 +34,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-xs tracking-widest uppercase text-green font-bold mb-4">Our Services</div>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-green-ink leading-[1.05] mb-6 max-w-4xl">
-            Lawn irrigation, landscape lighting, holiday lighting, paver restoration, and drainage.
+            Lawn irrigation, landscape lighting, holiday lighting, paver restoration, drainage, and raised gardens.
           </h1>
           <p className="text-lg text-gray-warm max-w-2xl leading-relaxed">
             Serving Northern Illinois &amp; Southern Wisconsin homeowners since {business.established}.
@@ -43,7 +44,7 @@ export default function ServicesPage() {
 
       <section className="bg-paper-warm py-20 border-t border-line">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <Link
                 key={service.slug}
@@ -55,7 +56,7 @@ export default function ServicesPage() {
                     src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
                     alt={`${service.title} — ${service.shortDescription}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

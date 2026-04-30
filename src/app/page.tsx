@@ -10,6 +10,7 @@ const cardImages: Record<string, string> = {
   'holiday-lighting': '/images/card-holiday-lighting.jpg',
   'paver-restoration': '/images/card-paver-restoration.jpg',
   'drainage': '/images/card-drainage.jpg',
+  'gardens': '/images/card-gardens.jpg',
 };
 
 export default function HomePage() {
@@ -39,7 +40,7 @@ export default function HomePage() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 w-full text-center">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] drop-shadow-lg font-bold">
-            Lawn Irrigation, Landscape Lighting, Holiday Lighting, Paver Restoration &amp; Drainage
+            Lawn Irrigation, Landscape Lighting, Holiday Lighting, Paver Restoration, Drainage &amp; Raised Gardens
           </h1>
 
           <p className="text-white/95 text-lg md:text-xl max-w-2xl mx-auto mt-7 leading-relaxed drop-shadow">
@@ -82,7 +83,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
               <Link
                 key={service.slug}
@@ -94,7 +95,7 @@ export default function HomePage() {
                     src={cardImages[service.slug] ?? '/images/card-irrigation.jpg'}
                     alt={`${service.title} — ${service.shortDescription}`}
                     fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>

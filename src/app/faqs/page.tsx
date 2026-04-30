@@ -6,7 +6,7 @@ import { breadcrumbSchema, faqsPageSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions',
-  description: 'Common questions about lawn irrigation, landscape lighting, holiday lighting, paver restoration, and drainage.',
+  description: 'Common questions about lawn irrigation, landscape lighting, holiday lighting, paver restoration, drainage, and raised gardens.',
 };
 
 export default function FaqsPage() {

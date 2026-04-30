@@ -86,7 +86,7 @@ export function citySchema(city: City) {
     '@type': 'LocalBusiness',
     '@id': `${business.url}/service-areas/${city.slug}/#business`,
     name: `${business.name} — ${city.name}, ${stateCode}`,
-    description: `${business.name} provides lawn irrigation, landscape lighting, holiday lighting, paver restoration, and drainage services to homeowners in ${city.name}, ${stateName}.`,
+    description: `${business.name} provides lawn irrigation, landscape lighting, holiday lighting, paver restoration, drainage, and raised garden services to homeowners in ${city.name}, ${stateName}.`,
     url: `${business.url}/service-areas/${city.slug}`,
     telephone: business.phone,
     address: {

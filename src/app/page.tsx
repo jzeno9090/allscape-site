@@ -40,11 +40,11 @@ export default function HomePage() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 w-full text-center">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-white leading-[1.1] drop-shadow-lg font-bold">
-            Lawn Irrigation, Landscape Lighting, Holiday Lighting, Paver Restoration, Drainage &amp; Raised Gardens
+            Specialty outdoor services for Northern Illinois &amp; Southern Wisconsin homes.
           </h1>
 
-          <p className="text-white/95 text-lg md:text-xl max-w-2xl mx-auto mt-7 leading-relaxed drop-shadow">
-            Serving Northern Illinois &amp; Southern Wisconsin since {business.established}.
+          <p className="text-white/95 text-lg md:text-xl max-w-3xl mx-auto mt-7 leading-relaxed drop-shadow">
+            Lawn irrigation, landscape lighting, holiday lighting, paver restoration, drainage, and raised gardens — since {business.established}.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">

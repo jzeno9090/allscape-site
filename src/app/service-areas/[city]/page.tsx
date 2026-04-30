@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   const st = city.state ?? 'IL';
   return {
-    title: `Lawn Irrigation, Landscape Lighting & Paver Restoration in ${city.name}, ${st}`,
+    title: `Outdoor services for ${city.name}, ${st} homes since ${business.established}`,
     description: `Sprinkler systems, landscape lighting, holiday lighting, paver restoration, drainage, and raised gardens for ${city.name}, ${st} homeowners. Established outdoor service experts since ${business.established}.`,
     alternates: {
       canonical: `${business.url}/service-areas/${city.slug}`,
@@ -86,7 +86,7 @@ export default async function CityPage({ params }: CityPageProps) {
               </div>
 
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl text-green-ink leading-[1.05] mb-6">
-                Lawn Irrigation, Landscape Lighting &amp; Paver Restoration in {city.name}, {city.state ?? 'IL'}
+                Outdoor services for {city.name}, {city.state ?? 'IL'} homes since {business.established}
               </h1>
 
               <p className="text-lg text-gray-warm leading-relaxed max-w-2xl mb-8">

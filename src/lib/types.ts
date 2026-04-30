@@ -80,6 +80,7 @@ export interface City {
   state?: string;
   lat: number;
   lng: number;
+  intro?: string;
 }
 
 export interface Review {

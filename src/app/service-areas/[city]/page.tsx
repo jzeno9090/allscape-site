@@ -134,6 +134,18 @@ export default async function CityPage({ params }: CityPageProps) {
         </div>
       </section>
 
+      {city.intro && (
+        <section className="bg-white py-16 border-t border-line">
+          <div className="max-w-3xl mx-auto px-6 prose-city">
+            {city.intro.split('\n\n').map((para, i) => (
+              <p key={i} className="text-gray-warm text-lg leading-relaxed mb-6 last:mb-0">
+                {para}
+              </p>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Services for this city */}
       <section className="bg-paper-warm py-20 border-t border-line">
         <div className="max-w-7xl mx-auto px-6">

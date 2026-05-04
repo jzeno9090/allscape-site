@@ -165,6 +165,12 @@ export function serviceSchema(service: Service) {
  * tied to the LocalBusiness. Each review is treated as 5 stars (matches
  * the on-page rendering, since reviews.json doesn't carry per-review
  * ratings).
+ *
+ * NOTE: do NOT include `aggregateRating` here. The sitewide
+ * `localBusinessSchema()` already emits aggregateRating on the
+ * LocalBusiness with the same `@id`. Google merges by @id and flags
+ * "Review has multiple aggregate ratings" as a critical error if both
+ * blocks define it. The single canonical rating lives in the layout.
  */
 export function reviewsPageSchema(items: Review[]) {
   return {
@@ -177,12 +183,6 @@ export function reviewsPageSchema(items: Review[]) {
       '@type': 'LocalBusiness',
       '@id': `${business.url}/#business`,
       name: business.name,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: business.rating,
-        reviewCount: String(items.length),
-        bestRating: '5',
-      },
       review: items.map((r) => ({
         '@type': 'Review',
         author: { '@type': 'Person', name: r.name },

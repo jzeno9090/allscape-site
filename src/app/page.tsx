@@ -20,17 +20,28 @@ export default function HomePage() {
 
       {/* HERO — full-bleed video/photo background, like the live site */}
       <section className="relative bg-green-ink overflow-hidden min-h-[680px] flex items-center">
+        {/* Mobile: optimized poster image (no autoplay video, saves ~6 MB on 4G) */}
+        <Image
+          src="/images/card-irrigation.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover md:hidden"
+        />
+
         {/*
+          Desktop: cinematic background video.
           Drop your hero video file in /public/videos/hero.mp4 (and optionally hero.webm).
-          Until then, the poster image is shown.
         */}
         <video
           autoPlay
           loop
           muted
           playsInline
+          preload="metadata"
           poster="/images/card-irrigation.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
         >
           <source src="/videos/hero.mp4" type="video/mp4" />
         </video>

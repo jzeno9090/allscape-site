@@ -72,20 +72,37 @@ export default async function ServicePage({ params }: ServicePageProps) {
       {/* Hero with photo or video */}
       <section className="relative bg-green-ink overflow-hidden min-h-[480px] flex items-center">
         {heroVideos[service.slug] ? (
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            poster={heroImages[service.slug] ?? '/images/card-irrigation.jpg'}
-            className="absolute inset-0 w-full h-full object-cover"
-          >
-            <source src={heroVideos[service.slug]} type="video/mp4" />
-          </video>
+          <>
+            {/* Mobile: optimized poster image (no autoplay video, saves several MB on 4G) */}
+            <Image
+              src={heroImages[service.slug] ?? '/images/card-irrigation.jpg'}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover md:hidden"
+            />
+            {/* Desktop: cinematic background video */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              poster={heroImages[service.slug] ?? '/images/card-irrigation.jpg'}
+              className="absolute inset-0 w-full h-full object-cover hidden md:block"
+            >
+              <source src={heroVideos[service.slug]} type="video/mp4" />
+            </video>
+          </>
         ) : (
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('${heroImages[service.slug] ?? '/images/card-irrigation.jpg'}')` }}
+          <Image
+            src={heroImages[service.slug] ?? '/images/card-irrigation.jpg'}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
         )}
         <div className="absolute inset-0 bg-gradient-to-r from-green-ink/85 via-green-ink/65 to-green-ink/40" />

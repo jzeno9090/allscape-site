@@ -11,6 +11,8 @@ export function Footer() {
               <img
                 src="/images/logo.webp"
                 alt="Allscape Services"
+                width={2500}
+                height={2151}
                 className="h-16 w-auto"
               />
             </div>

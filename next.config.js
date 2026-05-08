@@ -20,6 +20,14 @@ const nextConfig = {
     return [
       { source: '/lawn-drainage', destination: '/services/drainage', permanent: true },
 
+      // Old Squarespace booking URL → Jobber public request form
+      {
+        source: '/request-an-appointment',
+        destination:
+          'https://clienthub.getjobber.com/hubs/92f3f5ef-eaaa-4f2c-9178-35059701f70a/public/requests/426161/new',
+        permanent: true,
+      },
+
       // Service URL renames
       { source: '/lawn-irrigation-systems', destination: '/services/lawn-irrigation', permanent: true },
       { source: '/landscape-lighting', destination: '/services/landscape-lighting', permanent: true },
